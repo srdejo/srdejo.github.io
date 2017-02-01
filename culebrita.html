@@ -6,6 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <title>srdejo</title>
+        <meta property="og:url"                content="http://srdejo.github.io/culebrita.html" />
+        <meta property="og:type"               content="Juego HTML5" />
+        <meta property="og:title"              content="Juego SNAKE HTML5" />
+        <meta property="og:description"        content="Juego creado en HTML5, basado en el curso de codigofacilito.com, implementado por Daniel Jiménez" />
+        <meta property="og:image"              content="http://juegosparanokia.org/wp-content/uploads/2013/06/snakegame2013.jpg" />
         <!--Import Google Icon Font-->
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src="https://use.fontawesome.com/9c22612f67.js"></script>
@@ -20,16 +25,16 @@
 
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-        
+
         <style>
-	.card-image{
-		text-align: center;		
-	}
-	#canvas{
-		border: solid;
+            .card-image{
+                text-align: center;		
+            }
+            #canvas{
+                border: solid;
                 border-color: #e0f2f1;
-	}
-	</style>
+            }
+        </style>
     </head>
     <body class="">
         <nav class="cyan">
@@ -44,7 +49,8 @@
         <div class="row">
             <div class="col s12 m8 offset-m2">
                 <div class="card">
-                    <div class="card-image">  
+                    <a class="waves-effect waves-light btn" href="culebrita.html" >Reiniciar</a>
+                    <div class="card-image">
                         <br>
                         <canvas id="canvas" width="500" height="300"></canvas>
                     </div>
@@ -52,11 +58,11 @@
 
                     </div>
                     <div class="card-action">
-                        
+
                         <h5>Puntaje <small id="puntaje"></small></h5>
                         <h4 id="resultado"></h4>
                         <script type="text/javascript" src="js/game-dist.js"></script>
-                        
+
                         <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px; ">
                             <a class="btn-floating btn-large cyan darken-4">
                                 <i class="material-icons">contacts</i>
