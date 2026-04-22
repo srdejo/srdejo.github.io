@@ -1,50 +1,281 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daniel - Backend Software Developer</title>
-    <meta
-      name="description"
-      content="Backend Software Developer specialized in Java, Spring Boot, Microservices, and Financial Systems. Passionate about clean code and digital transformation."
-    />
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Jiménez | Senior Backend Engineer</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-content">
+      <div class="logo">DJ</div>
+      <nav class="nav-desktop">
+        <a href="#inicio">Inicio</a>
+        <a href="#impacto">Impacto</a>
+        <a href="#stack">Stack</a>
+        <a href="#arquitectura">Arquitectura</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/srdejo" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/srdejo" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:srdejo@gmail.com" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
 
-    <!-- Favicon using your profile photo -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="https://cdn.builder.io/api/v1/image/assets%2Ffc79d3cd6c6542a998e7c1ba8812f60f%2F051a64f1bbf64ccb81152302058b61c6?format=webp&width=32&height=32"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="https://cdn.builder.io/api/v1/image/assets%2Ffc79d3cd6c6542a998e7c1ba8812f60f%2F051a64f1bbf64ccb81152302058b61c6?format=webp&width=16&height=16"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="https://cdn.builder.io/api/v1/image/assets%2Ffc79d3cd6c6542a998e7c1ba8812f60f%2F051a64f1bbf64ccb81152302058b61c6?format=webp&width=180&height=180"
-    />
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-image">
+      <div class="profile-circle">
+        <img src="old_2/img/perfil.jpg" alt="Daniel Jiménez">
+      </div>
+    </div>
+    <div class="hero-content">
+      <p style="color: var(--accent-blue); font-size: 1rem; margin-bottom: 0.5rem;">¡Hola! Soy</p>
+      <h1>Daniel Jiménez</h1>
+      <p class="subtitle">Senior Backend Engineer</p>
+      <p>Especializado en el diseño y desarrollo de soluciones backend robustas, escalables y seguras para el sector fintech. Experto en Java, Spring Boot y arquitecturas de microservicios en la nube.</p>
+      <div class="hero-buttons">
+        <a href="#contacto" class="btn btn-primary">
+          <i class="fas fa-envelope"></i> Contactarme
+        </a>
+        <a href="Hoja de Vida - Abril.pdf" download class="btn btn-secondary">
+          <i class="fas fa-download"></i> Descargar CV
+        </a>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">7+</div>
+          <div class="stat-label">Años de experiencia</div>
+        </div>
+      </div>
+      <div class="hero-social">
+        <a href="https://linkedin.com/in/srdejo" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/srdejo" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:srdejo@gmail.com" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Open Graph / Social Media Preview -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Daniel - Backend Software Developer" />
-    <meta
-      property="og:description"
-      content="Backend Software Developer specialized in Java, Spring Boot, Microservices, and Financial Systems"
-    />
-    <meta
-      property="og:image"
-      content="https://cdn.builder.io/api/v1/image/assets%2Ffc79d3cd6c6542a998e7c1ba8812f60f%2F051a64f1bbf64ccb81152302058b61c6?format=webp&width=800"
-    />
-    <script type="module" crossorigin src="/assets/index-BdPqJSdF.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-fB5ldEpT.css">
-  </head>
+  <!-- IMPACTO REAL -->
+  <section id="impacto">
+    <h2>Impacto real</h2>
+    <p>Proyectos donde he dejado huella en el sector fintech</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-icon">💳</div>
+        <h3>Mouv</h3>
+        <p class="subtitle">Plataforma de pagos</p>
+        <p>Desarrollo de microservicios para procesamiento de pagos y recaudos. Integración con múltiples proveedores y control de transacciones.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">💰</div>
+        <h3>Sempli</h3>
+        <p class="subtitle">Tarjeta de crédito</p>
+        <p>Liderazgo técnico en el desarrollo del backend de la tarjeta de crédito. Diseño de arquitectura, APIs y lógica de negocio financiero.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🏦</div>
+        <h3>Crediservir</h3>
+        <p class="subtitle">Soluciones financieras</p>
+        <p>Desarrollo de la app móvil y backend para la cooperativa, implementando transferencias, consultas de saldo, créditos y operaciones con seguridad crítica.</p>
+      </div>
+    </div>
+  </section>
 
-  <body>
-    <div id="root"></div>
+  <!-- STACK TÉCNICO -->
+  <section id="stack">
+    <h2>Stack técnico</h2>
+    <p>Tecnologías y herramientas que domino</p>
+    <div class="stack-grid">
+      <div class="stack-item">
+        <i class="fab fa-java"></i>
+        <p><strong>Java</strong></p>
+      </div>
+      <div class="stack-item">
+        <i class="fas fa-leaf"></i>
+        <p><strong>Spring Boot</strong></p>
+      </div>
+      <div class="stack-item">
+        <i class="fab fa-aws"></i>
+        <p><strong>AWS</strong></p>
+      </div>
+      <div class="stack-item">
+        <i class="fas fa-cube"></i>
+        <p><strong>Microservicios</strong></p>
+      </div>
+      <div class="stack-item">
+        <i class="fab fa-docker"></i>
+        <p><strong>Docker</strong></p>
+      </div>
+      <div class="stack-item">
+        <i class="fas fa-ship"></i>
+        <p><strong>Kubernetes</strong></p>
+      </div>
+      <div class="stack-item">
+        <i class="fas fa-database"></i>
+        <p><strong>PostgreSQL</strong></p>
+      </div>
+      <div class="stack-item">
+        <i class="fas fa-layer-group"></i>
+        <p><strong>Kafka</strong></p>
+      </div>
+    </div>
+  </section>
 
-  </body>
+  <!-- ARQUITECTURA -->
+  <section id="arquitectura">
+    <h2>Cómo diseño sistemas de pagos</h2>
+    <p>Arquitectura orientada a eventos para desacoplamiento de servicios, mejorar resiliencia y manejar cargas de alta concurrencia</p>
+    
+    <div class="architecture-diagram-container">
+      <div class="architecture-flow">
+        <!-- Row 1: Main Flow -->
+        <div class="flow-main">
+          <div class="flow-box cliente">
+            <i class="fas fa-user"></i>
+            <span>Cliente</span>
+          </div>
+          <div class="flow-connector">→</div>
+          
+          <div class="flow-box api-gateway">
+            <i class="fas fa-arrows-alt-h"></i>
+            <span>API Gateway</span>
+          </div>
+          <div class="flow-connector">→</div>
+          
+          <div class="flow-box payment-service">
+            <i class="fas fa-cube"></i>
+            <span>Payment Service</span>
+          </div>
+          <div class="flow-connector">→</div>
+          
+          <div class="flow-box database">
+            <i class="fas fa-database"></i>
+            <span>Database</span>
+          </div>
+        </div>
+
+        <!-- Row 2: Vertical connector -->
+        <div class="flow-vertical">
+          <div class="vertical-line"></div>
+        </div>
+
+        <!-- Row 3: Message Queue -->
+        <div class="flow-queue">
+          <div class="flow-box message-queue">
+            <i class="fas fa-envelope"></i>
+            <span>Message Queue</span>
+          </div>
+          <div class="queue-connector"></div>
+          <div class="flow-box audit-service">
+            <i class="fas fa-clipboard-list"></i>
+            <span>Audit Service</span>
+          </div>
+        </div>
+
+        <!-- Row 4: Vertical connector to notifications -->
+        <div class="flow-vertical-down">
+          <div class="vertical-line"></div>
+        </div>
+
+        <!-- Row 5: Notification Service -->
+        <div class="flow-notifications">
+          <div class="flow-box notification-service">
+            <i class="fas fa-bell"></i>
+            <span>Notification Service</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="architecture-description">
+        Arquitectura orientada a eventos para desacoplamiento de servicios, mejorar resiliencia y manejar cargas de alta concurrencia.
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="architecture-features-grid">
+      <div class="feature-card">
+        <i class="fas fa-shield-alt"></i>
+        <h4>Idempotencia</h4>
+        <p>Evito transacciones duplicadas mediante claves únicas y validaciones en cada operación de pago.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-arrows-alt"></i>
+        <h4>Concurrencia</h4>
+        <p>Control de acceso simultáneo con locks optimistas y pesimistas para garantizar consistencia.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-heartbeat"></i>
+        <h4>Resiliencia</h4>
+        <p>Implemento retries, circuit breakers y fallbacks para garantizar disponibilidad ante fallos.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-lock"></i>
+        <h4>Seguridad</h4>
+        <p>Autenticación, autorización con OAuth2, JWT y protección en endpoints críticos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact-section">
+    <h2>¿Hablemos?</h2>
+    <p>Estoy abierto a nuevas oportunidades donde pueda aportar mis habilidades</p>
+    <div class="contact-content">
+      <p>Contáctame para discutir proyectos, colaboraciones o cualquier pregunta sobre arquitectura backend y fintech.</p>
+      <a href="mailto:srdejo@gmail.com" class="btn btn-primary" style="width: 100%; justify-content: center;">
+        <i class="fas fa-envelope"></i> Enviar mensaje
+      </a>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Ocaña, Norte de Santander, Colombia</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:srdejo@gmail.com">srdejo@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://linkedin.com/in/srdejo" target="_blank">linkedin.com/in/srdejo</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/srdejo" target="_blank">github.com/srdejo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Daniel Jiménez. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
