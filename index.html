@@ -151,70 +151,7 @@
     <h2>Cómo diseño sistemas de pagos</h2>
     <p>Arquitectura orientada a eventos para desacoplamiento de servicios, mejorar resiliencia y manejar cargas de alta concurrencia</p>
     
-    <div class="architecture-diagram-container">
-      <div class="architecture-flow">
-        <!-- Row 1: Main Flow -->
-        <div class="flow-main">
-          <div class="flow-box cliente">
-            <i class="fas fa-user"></i>
-            <span>Cliente</span>
-          </div>
-          <div class="flow-connector">→</div>
-          
-          <div class="flow-box api-gateway">
-            <i class="fas fa-arrows-alt-h"></i>
-            <span>API Gateway</span>
-          </div>
-          <div class="flow-connector">→</div>
-          
-          <div class="flow-box payment-service">
-            <i class="fas fa-cube"></i>
-            <span>Payment Service</span>
-          </div>
-          <div class="flow-connector">→</div>
-          
-          <div class="flow-box database">
-            <i class="fas fa-database"></i>
-            <span>Database</span>
-          </div>
-        </div>
-
-        <!-- Row 2: Vertical connector -->
-        <div class="flow-vertical">
-          <div class="vertical-line"></div>
-        </div>
-
-        <!-- Row 3: Message Queue -->
-        <div class="flow-queue">
-          <div class="flow-box message-queue">
-            <i class="fas fa-envelope"></i>
-            <span>Message Queue</span>
-          </div>
-          <div class="queue-connector"></div>
-          <div class="flow-box audit-service">
-            <i class="fas fa-clipboard-list"></i>
-            <span>Audit Service</span>
-          </div>
-        </div>
-
-        <!-- Row 4: Vertical connector to notifications -->
-        <div class="flow-vertical-down">
-          <div class="vertical-line"></div>
-        </div>
-
-        <!-- Row 5: Notification Service -->
-        <div class="flow-notifications">
-          <div class="flow-box notification-service">
-            <i class="fas fa-bell"></i>
-            <span>Notification Service</span>
-          </div>
-        </div>
-      </div>
-
-      <p class="architecture-description">
-        Arquitectura orientada a eventos para desacoplamiento de servicios, mejorar resiliencia y manejar cargas de alta concurrencia.
-      </p>
-    </div>
+    <!-- Interactive Payment System Simulator -->
 
     <!-- Features Grid -->
     <div class="architecture-features-grid">
@@ -237,6 +174,46 @@
         <i class="fas fa-lock"></i>
         <h4>Seguridad</h4>
         <p>Autenticación, autorización con OAuth2, JWT y protección en endpoints críticos.</p>
+      </div>
+    </div>
+
+    <!-- Integraciones Externas -->
+    <div class="integrations-container">
+      <div class="integrations-header">
+        <h3>Integraciones a proveedores externos</h3>
+        <p>Conexiones con servicios de terceros para expandir funcionalidades</p>
+      </div>
+      <div class="integrations-grid">
+        <div class="integration-item">
+          <i class="fas fa-credit-card"></i>
+          <h4>Pasarelas de pago</h4>
+          <p>Stripe, PayPal, Adyen y otros procesadores de pagos globales.</p>
+        </div>
+        <div class="integration-item">
+          <i class="fas fa-building-columns"></i>
+          <h4>Bancos</h4>
+          <p>APIs bancarias para transferencias, consultas de saldo y validaciones.</p>
+        </div>
+        <div class="integration-item">
+          <i class="fas fa-mobile-alt"></i>
+          <h4>SMS y Email</h4>
+          <p>Twilio, SendGrid para notificaciones y confirmaciones de transacciones.</p>
+        </div>
+        <div class="integration-item">
+          <i class="fas fa-chart-line"></i>
+          <h4>Analytics</h4>
+          <p>Mixpanel, Segment para tracking de eventos y análisis de comportamiento.</p>
+        </div>
+        <div class="integration-item">
+          <i class="fas fa-cloud"></i>
+          <h4>Cloud Storage</h4>
+          <p>AWS S3, Google Cloud Storage para almacenamiento de documentos.</p>
+        </div>
+        <div class="integration-item">
+          <i class="fas fa-shield-alt"></i>
+          <h4>Verificación</h4>
+          <p>Servicios KYC, validación de identidad y detección de fraude.</p>
+        </div>
       </div>
     </div>
   </section>

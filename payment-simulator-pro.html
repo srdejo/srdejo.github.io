@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment System Dashboard</title>
+
+<style>
+:root {
+  --bg:#0f172a;
+  --card:#1e293b;
+  --border:#334155;
+  --blue:#38bdf8;
+  --green:#10b981;
+  --red:#ef4444;
+  --purple:#a78bfa;
+}
+
+body {
+  margin:0;
+  font-family:Inter, sans-serif;
+  background:var(--bg);
+  color:#fff;
+}
+
+/* LAYOUT */
+.dashboard {
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  gap:20px;
+  padding:20px;
+}
+
+@media(max-width:900px){
+  .dashboard { grid-template-columns:1fr; }
+}
+
+/* CARDS */
+.card {
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:15px;
+}
+
+/* FLOW */
+.flow {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+.node {
+  width:110px;
+  height:110px;
+  border-radius:12px;
+  border:2px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  transition:0.3s;
+  position:relative;
+}
+
+.processing { border-color:var(--blue); box-shadow:0 0 10px var(--blue);}
+.success { border-color:var(--green);}
+.error { border-color:var(--red);}
+.compensating { border-color:orange;}
+
+.node small {
+  position:absolute;
+  bottom:5px;
+  font-size:10px;
+  opacity:.7;
+}
+
+/* METRICS */
+.metrics {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.metric {
+  background:#020617;
+  padding:10px;
+  border-radius:8px;
+  text-align:center;
+}
+
+.metric strong {
+  font-size:18px;
+}
+
+/* LOG */
+.log {
+  max-height:300px;
+  overflow:auto;
+  font-size:13px;
+}
+
+.log div {
+  margin-bottom:5px;
+  opacity:.8;
+}
+
+/* BUTTONS */
+.controls {
+  margin-top:10px;
+  text-align:center;
+}
+
+button {
+  padding:10px 15px;
+  margin:5px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+  <!-- FLOW -->
+  <div class="card">
+    <h3>Transaction Flow</h3>
+
+    <div class="flow">
+      <div id="client" class="node">Client</div>
+      <div id="payment" class="node">Payment</div>
+      <div id="provider" class="node">Provider</div>
+      <div id="db" class="node">DB</div>
+      <div id="queue" class="node">Queue</div>
+    </div>
+
+    <div class="controls">
+      <button onclick="sim.start()">Start</button>
+      <button onclick="sim.failProvider()">Fail Provider</button>
+    </div>
+  </div>
+
+  <!-- SIDE PANEL -->
+  <div class="card">
+
+    <h3>Metrics</h3>
+    <div class="metrics">
+      <div class="metric">
+        <strong id="latency">0ms</strong>
+        <div>Total Latency</div>
+      </div>
+
+      <div class="metric">
+        <strong id="retries">0</strong>
+        <div>Retries</div>
+      </div>
+
+      <div class="metric">
+        <strong id="queueSize">0</strong>
+        <div>Queue</div>
+      </div>
+
+      <div class="metric">
+        <strong id="circuit">CLOSED</strong>
+        <div>Circuit</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:15px;">Event Log</h3>
+    <div class="log" id="log"></div>
+
+  </div>
+
+</div>
+
+<script>
+class Simulator {
+
+  constructor(){
+    this.fail = false;
+    this.startTime = 0;
+    this.retries = 0;
+
+    this.queue = 0;
+
+    this.circuit = {
+      state:'CLOSED',
+      failures:0,
+      threshold:2,
+      timeout:3000,
+      lastFail:0
+    };
+  }
+
+  log(msg){
+    const el = document.getElementById('log');
+    el.innerHTML += "<div>• "+msg+"</div>";
+    el.scrollTop = el.scrollHeight;
+  }
+
+  setNode(id, state){
+    const el = document.getElementById(id);
+    el.className="node "+state;
+  }
+
+  updateMetrics(){
+    document.getElementById('retries').innerText = this.retries;
+    document.getElementById('queueSize').innerText = this.queue;
+    document.getElementById('circuit').innerText = this.circuit.state;
+  }
+
+  async start(){
+    this.reset();
+    this.startTime = Date.now();
+
+    try {
+      await this.saga();
+      this.log("SUCCESS");
+    } catch(e){
+      this.log("FAILED → compensated");
+    }
+
+    document.getElementById('latency').innerText =
+      (Date.now() - this.startTime)+"ms";
+  }
+
+  async saga(){
+    const steps = [
+      { id:"payment", comp:true },
+      { id:"provider", comp:true },
+      { id:"db", comp:true }
+    ];
+
+    const done = [];
+
+    for(let s of steps){
+      try {
+        this.log("Step: "+s.id);
+
+        if(s.id==="provider"){
+          await this.callProvider();
+        } else {
+          await this.step(s.id);
+        }
+
+        done.push(s);
+
+      } catch(e){
+        this.log("Error in "+s.id);
+
+        for(let i=done.length-1;i>=0;i--){
+          await this.compensate(done[i].id);
+        }
+
+        throw e;
+      }
+    }
+
+    this.asyncFlow();
+  }
+
+  async callProvider(){
+
+    if(this.circuit.state==="OPEN"){
+      if(Date.now()-this.circuit.lastFail > this.circuit.timeout){
+        this.circuit.state="HALF_OPEN";
+      } else {
+        throw new Error("circuit open");
+      }
+    }
+
+    let tries=0;
+
+    while(tries<3){
+      try {
+        await this.step("provider");
+
+        if(this.fail) throw new Error("fail");
+
+        this.circuit.state="CLOSED";
+        this.circuit.failures=0;
+        return;
+
+      } catch(e){
+        tries++;
+        this.retries++;
+        this.circuit.failures++;
+
+        this.log("Retry "+tries);
+
+        if(this.circuit.failures>=this.circuit.threshold){
+          this.circuit.state="OPEN";
+          this.circuit.lastFail=Date.now();
+        }
+
+        this.updateMetrics();
+
+        if(tries>=3) throw e;
+
+        await this.delay(500);
+      }
+    }
+  }
+
+  async step(id){
+    this.setNode(id,"processing");
+    await this.delay(400);
+    this.setNode(id,"success");
+  }
+
+  async compensate(id){
+    this.setNode(id,"compensating");
+    this.log("Compensating "+id);
+    await this.delay(300);
+  }
+
+  async asyncFlow(){
+    this.queue++;
+    this.updateMetrics();
+    this.log("Event queued");
+
+    await this.delay(1000);
+
+    this.queue--;
+    this.updateMetrics();
+    this.log("Async processed");
+  }
+
+  delay(ms){
+    return new Promise(r=>setTimeout(r,ms));
+  }
+
+  reset(){
+    ["client","payment","provider","db","queue"].forEach(id=>{
+      this.setNode(id,"");
+    });
+
+    document.getElementById('log').innerHTML="";
+    this.retries=0;
+    this.queue=0;
+    this.updateMetrics();
+  }
+
+  failProvider(){
+    this.fail=true;
+    this.log("Provider will fail");
+  }
+}
+
+const sim = new Simulator();
+</script>
+
+</body>
+</html>
