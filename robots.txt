@@ -1,14 +1,29 @@
-User-agent: Googlebot
-Allow: /
+# Robots.txt para srdejo.github.io
 
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# Permitir a todos los buscadores
 User-agent: *
 Allow: /
+Allow: /index.html
+Allow: /payment-simulator-pro.html
+Allow: /payment-system-simulator.html
+Allow: /assets/
+Allow: /styles.css
+Allow: /script.js
+Allow: /payment-simulator.js
+
+# Desallow de directorios innecesarios
+Disallow: /old/
+Disallow: /old_2/
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /.kiro/
+
+# Desallow de archivos específicos
+Disallow: /*.pdf$
+Disallow: /placeholder.svg
+
+# Crawl delay (opcional, para evitar sobrecarga)
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://srdejo.github.io/sitemap.xml

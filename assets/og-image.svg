@@ -1,0 +1,37 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0a0e27"/>
+  
+  <!-- Gradient accent bar -->
+  <defs>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="8" fill="url(#accentGradient)"/>
+  
+  <!-- Main title -->
+  <text x="60" y="180" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#e0e7ff">
+    Daniel Jiménez
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="60" y="270" font-family="Arial, sans-serif" font-size="36" fill="#3b82f6">
+    Senior Backend Engineer
+  </text>
+  
+  <!-- Description -->
+  <text x="60" y="330" font-family="Arial, sans-serif" font-size="22" fill="#e0e7ff">
+    Microservicios • Fintech • AWS • Java • Spring Boot
+  </text>
+  
+  <!-- Footer -->
+  <text x="60" y="580" font-family="Arial, sans-serif" font-size="20" fill="#3b82f6">
+    srdejo.github.io
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="1100" cy="100" r="40" fill="#a855f7" opacity="0.2"/>
+  <circle cx="150" cy="550" r="50" fill="#3b82f6" opacity="0.15"/>
+</svg>

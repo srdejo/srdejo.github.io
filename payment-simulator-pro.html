@@ -3,7 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payment System Dashboard</title>
+<title>Payment System Dashboard | Daniel Jiménez</title>
+<meta name="description" content="Simulador avanzado de sistemas de pago con arquitectura event-driven. Visualiza el flujo de transacciones, reintentos y circuit breakers en tiempo real.">
+<meta name="keywords" content="payment simulator, sistema de pagos, event-driven, arquitectura, fintech, transacciones">
+<meta name="author" content="Daniel Jiménez">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://srdejo.github.io/payment-simulator-pro.html">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Payment System Dashboard - Simulador de Pagos">
+<meta property="og:description" content="Simulador avanzado de sistemas de pago con arquitectura event-driven. Visualiza transacciones, reintentos y circuit breakers.">
+<meta property="og:image" content="https://srdejo.github.io/assets/og-image.png">
+<meta property="og:url" content="https://srdejo.github.io/payment-simulator-pro.html">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Payment System Dashboard - Simulador de Pagos">
+<meta name="twitter:description" content="Simulador avanzado de sistemas de pago con arquitectura event-driven.">
+<meta name="twitter:image" content="https://srdejo.github.io/assets/og-image.png">
+<meta name="twitter:creator" content="@srdejo">
+<meta name="twitter:site" content="@srdejo">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Payment System Dashboard",
+  "description": "Simulador avanzado de sistemas de pago con arquitectura event-driven. Visualiza el flujo de transacciones, reintentos y circuit breakers.",
+  "url": "https://srdejo.github.io/payment-simulator-pro.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
 
 <style>
 :root {
@@ -126,50 +165,50 @@ button {
 
   <!-- FLOW -->
   <div class="card">
-    <h3>Transaction Flow</h3>
+    <h2>Transaction Flow</h2>
 
-    <div class="flow">
-      <div id="client" class="node">Client</div>
-      <div id="payment" class="node">Payment</div>
-      <div id="provider" class="node">Provider</div>
-      <div id="db" class="node">DB</div>
-      <div id="queue" class="node">Queue</div>
+    <div class="flow" role="region" aria-label="Flujo de transacciones">
+      <div id="client" class="node" role="img" aria-label="Cliente">Client</div>
+      <div id="payment" class="node" role="img" aria-label="Servicio de Pago">Payment</div>
+      <div id="provider" class="node" role="img" aria-label="Proveedor">Provider</div>
+      <div id="db" class="node" role="img" aria-label="Base de Datos">DB</div>
+      <div id="queue" class="node" role="img" aria-label="Cola de Mensajes">Queue</div>
     </div>
 
     <div class="controls">
-      <button onclick="sim.start()">Start</button>
-      <button onclick="sim.failProvider()">Fail Provider</button>
+      <button onclick="sim.start()" aria-label="Iniciar simulación">Start</button>
+      <button onclick="sim.failProvider()" aria-label="Simular fallo del proveedor">Fail Provider</button>
     </div>
   </div>
 
   <!-- SIDE PANEL -->
   <div class="card">
 
-    <h3>Metrics</h3>
+    <h2>Metrics</h2>
     <div class="metrics">
       <div class="metric">
-        <strong id="latency">0ms</strong>
+        <strong id="latency" aria-label="Latencia total">0ms</strong>
         <div>Total Latency</div>
       </div>
 
       <div class="metric">
-        <strong id="retries">0</strong>
+        <strong id="retries" aria-label="Número de reintentos">0</strong>
         <div>Retries</div>
       </div>
 
       <div class="metric">
-        <strong id="queueSize">0</strong>
+        <strong id="queueSize" aria-label="Tamaño de la cola">0</strong>
         <div>Queue</div>
       </div>
 
       <div class="metric">
-        <strong id="circuit">CLOSED</strong>
+        <strong id="circuit" aria-label="Estado del circuit breaker">CLOSED</strong>
         <div>Circuit</div>
       </div>
     </div>
 
-    <h3 style="margin-top:15px;">Event Log</h3>
-    <div class="log" id="log"></div>
+    <h2 style="margin-top:15px;">Event Log</h2>
+    <div class="log" id="log" role="log" aria-live="polite" aria-label="Registro de eventos"></div>
 
   </div>
 

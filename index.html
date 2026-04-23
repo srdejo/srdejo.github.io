@@ -4,35 +4,155 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daniel Jiménez | Senior Backend Engineer</title>
+  <meta name="description" content="Senior Backend Engineer especializado en arquitectura de microservicios, fintech y sistemas de pago. Experiencia con Java, Spring Boot, AWS y Kubernetes.">
+  <meta name="keywords" content="backend engineer, java, spring boot, microservicios, fintech, aws, arquitectura, kubernetes, docker">
+  <meta name="author" content="Daniel Jiménez">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Spanish">
+  <link rel="canonical" href="https://srdejo.github.io/">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Daniel Jiménez | Senior Backend Engineer">
+  <meta property="og:description" content="Ingeniero Backend Senior especializado en arquitectura de microservicios, fintech y sistemas de pago escalables.">
+  <meta property="og:image" content="https://srdejo.github.io/assets/og-image.png">
+  <meta property="og:url" content="https://srdejo.github.io/">
+  <meta property="og:locale" content="es_ES">
+  <meta property="profile:first_name" content="Daniel">
+  <meta property="profile:last_name" content="Jiménez">
+  <meta property="profile:username" content="srdejo">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Daniel Jiménez | Senior Backend Engineer">
+  <meta name="twitter:description" content="Ingeniero Backend Senior especializado en arquitectura de microservicios, fintech y sistemas de pago escalables.">
+  <meta name="twitter:image" content="https://srdejo.github.io/assets/og-image.png">
+  <meta name="twitter:creator" content="@srdejo">
+  <meta name="twitter:site" content="@srdejo">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Daniel Jiménez",
+    "jobTitle": "Senior Backend Engineer",
+    "description": "Ingeniero Backend Senior especializado en arquitectura de microservicios, fintech y sistemas de pago escalables.",
+    "url": "https://srdejo.github.io/",
+    "image": "https://srdejo.github.io/assets/perfil.jpg",
+    "email": "srdejo@gmail.com",
+    "sameAs": [
+      "https://linkedin.com/in/srdejo",
+      "https://github.com/srdejo"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ocaña",
+      "addressRegion": "Santander",
+      "addressCountry": "CO"
+    },
+    "knowsAbout": [
+      "Java",
+      "Spring Boot",
+      "Microservicios",
+      "AWS",
+      "Kubernetes",
+      "Docker",
+      "PostgreSQL",
+      "Kafka",
+      "Arquitectura de Software",
+      "Fintech"
+    ]
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://srdejo.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Impacto Real",
+        "item": "https://srdejo.github.io/#impacto"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Stack Técnico",
+        "item": "https://srdejo.github.io/#stack"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Arquitectura",
+        "item": "https://srdejo.github.io/#arquitectura"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Contacto",
+        "item": "https://srdejo.github.io/#contacto"
+      }
+    ]
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Daniel Jiménez",
+    "url": "https://srdejo.github.io/",
+    "logo": "https://srdejo.github.io/favicon.png",
+    "description": "Portafolio profesional de Daniel Jiménez, Senior Backend Engineer",
+    "sameAs": [
+      "https://linkedin.com/in/srdejo",
+      "https://github.com/srdejo"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Professional",
+      "email": "srdejo@gmail.com"
+    }
+  }
+  </script>
   <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
   <!-- HEADER -->
-  <header>
+  <header role="banner">
     <div class="header-content">
-      <div class="logo">DJ</div>
-      <nav class="nav-desktop">
+      <div class="logo" aria-label="Daniel Jiménez - Inicio">DJ</div>
+      <nav class="nav-desktop" role="navigation" aria-label="Navegación principal">
         <a href="#inicio">Inicio</a>
         <a href="#impacto">Impacto</a>
         <a href="#stack">Stack</a>
         <a href="#arquitectura">Arquitectura</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <div class="social-icons">
-        <a href="https://linkedin.com/in/srdejo" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
+      <div class="social-icons" role="region" aria-label="Enlaces de redes sociales">
+        <a href="https://linkedin.com/in/srdejo" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn de Daniel Jiménez">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
-        <a href="https://github.com/srdejo" target="_blank" title="GitHub">
-          <i class="fab fa-github"></i>
+        <a href="https://github.com/srdejo" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub de Daniel Jiménez">
+          <i class="fab fa-github" aria-hidden="true"></i>
         </a>
-        <a href="mailto:srdejo@gmail.com" title="Email">
-          <i class="fas fa-envelope"></i>
+        <a href="mailto:srdejo@gmail.com" aria-label="Enviar correo a Daniel Jiménez">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
         </a>
       </div>
-      <div class="hamburger">
+      <div class="hamburger" role="button" tabindex="0" aria-label="Abrir menú de navegación" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -41,23 +161,23 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero" id="inicio">
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
     <div class="hero-image">
       <div class="profile-circle">
-        <img src="old_2/img/perfil.jpg" alt="Daniel Jiménez">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" data-src="assets/perfil.jpg" alt="Daniel Jiménez, Ingeniero Backend Senior, foto de perfil profesional" loading="lazy">
       </div>
     </div>
     <div class="hero-content">
       <p style="color: var(--accent-blue); font-size: 1rem; margin-bottom: 0.5rem;">¡Hola! Soy</p>
-      <h1>Daniel Jiménez</h1>
+      <h1 id="hero-title">Daniel Jiménez</h1>
       <p class="subtitle">Senior Backend Engineer</p>
       <p>Especializado en el diseño y desarrollo de soluciones backend robustas, escalables y seguras para el sector fintech. Experto en Java, Spring Boot y arquitecturas de microservicios en la nube.</p>
       <div class="hero-buttons">
         <a href="#contacto" class="btn btn-primary">
-          <i class="fas fa-envelope"></i> Contactarme
+          <i class="fas fa-envelope" aria-hidden="true"></i> Contactarme
         </a>
         <a href="Hoja de Vida - Abril.pdf" download class="btn btn-secondary">
-          <i class="fas fa-download"></i> Descargar CV
+          <i class="fas fa-download" aria-hidden="true"></i> Descargar CV
         </a>
       </div>
       <div class="stats">
@@ -66,89 +186,89 @@
           <div class="stat-label">Años de experiencia</div>
         </div>
       </div>
-      <div class="hero-social">
-        <a href="https://linkedin.com/in/srdejo" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
+      <div class="hero-social" role="region" aria-label="Enlaces de redes sociales">
+        <a href="https://linkedin.com/in/srdejo" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn de Daniel Jiménez">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
-        <a href="https://github.com/srdejo" target="_blank" title="GitHub">
-          <i class="fab fa-github"></i>
+        <a href="https://github.com/srdejo" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub de Daniel Jiménez">
+          <i class="fab fa-github" aria-hidden="true"></i>
         </a>
-        <a href="mailto:srdejo@gmail.com" title="Email">
-          <i class="fas fa-envelope"></i>
+        <a href="mailto:srdejo@gmail.com" aria-label="Enviar correo a Daniel Jiménez">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
         </a>
       </div>
     </div>
   </section>
 
   <!-- IMPACTO REAL -->
-  <section id="impacto">
-    <h2>Impacto real</h2>
+  <section id="impacto" aria-labelledby="impacto-title">
+    <h2 id="impacto-title">Impacto real</h2>
     <p>Proyectos donde he dejado huella en el sector fintech</p>
     <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-icon">💳</div>
+      <article class="project-card">
+        <div class="project-icon" aria-hidden="true">💳</div>
         <h3>Mouv</h3>
         <p class="subtitle">Plataforma de pagos</p>
         <p>Desarrollo de microservicios para procesamiento de pagos y recaudos. Integración con múltiples proveedores y control de transacciones.</p>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">💰</div>
+      </article>
+      <article class="project-card">
+        <div class="project-icon" aria-hidden="true">💰</div>
         <h3>Sempli</h3>
         <p class="subtitle">Tarjeta de crédito</p>
         <p>Liderazgo técnico en el desarrollo del backend de la tarjeta de crédito. Diseño de arquitectura, APIs y lógica de negocio financiero.</p>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🏦</div>
+      </article>
+      <article class="project-card">
+        <div class="project-icon" aria-hidden="true">🏦</div>
         <h3>Crediservir</h3>
         <p class="subtitle">Soluciones financieras</p>
         <p>Desarrollo de la app móvil y backend para la cooperativa, implementando transferencias, consultas de saldo, créditos y operaciones con seguridad crítica.</p>
-      </div>
+      </article>
     </div>
   </section>
 
   <!-- STACK TÉCNICO -->
-  <section id="stack">
-    <h2>Stack técnico</h2>
+  <section id="stack" aria-labelledby="stack-title">
+    <h2 id="stack-title">Stack técnico</h2>
     <p>Tecnologías y herramientas que domino</p>
     <div class="stack-grid">
-      <div class="stack-item">
-        <i class="fab fa-java"></i>
+      <div class="stack-item" role="img" aria-label="Java">
+        <i class="fab fa-java" aria-hidden="true"></i>
         <p><strong>Java</strong></p>
       </div>
-      <div class="stack-item">
-        <i class="fas fa-leaf"></i>
+      <div class="stack-item" role="img" aria-label="Spring Boot">
+        <i class="fas fa-leaf" aria-hidden="true"></i>
         <p><strong>Spring Boot</strong></p>
       </div>
-      <div class="stack-item">
-        <i class="fab fa-aws"></i>
+      <div class="stack-item" role="img" aria-label="AWS">
+        <i class="fab fa-aws" aria-hidden="true"></i>
         <p><strong>AWS</strong></p>
       </div>
-      <div class="stack-item">
-        <i class="fas fa-cube"></i>
+      <div class="stack-item" role="img" aria-label="Microservicios">
+        <i class="fas fa-cube" aria-hidden="true"></i>
         <p><strong>Microservicios</strong></p>
       </div>
-      <div class="stack-item">
-        <i class="fab fa-docker"></i>
+      <div class="stack-item" role="img" aria-label="Docker">
+        <i class="fab fa-docker" aria-hidden="true"></i>
         <p><strong>Docker</strong></p>
       </div>
-      <div class="stack-item">
-        <i class="fas fa-ship"></i>
+      <div class="stack-item" role="img" aria-label="Kubernetes">
+        <i class="fas fa-ship" aria-hidden="true"></i>
         <p><strong>Kubernetes</strong></p>
       </div>
-      <div class="stack-item">
-        <i class="fas fa-database"></i>
+      <div class="stack-item" role="img" aria-label="PostgreSQL">
+        <i class="fas fa-database" aria-hidden="true"></i>
         <p><strong>PostgreSQL</strong></p>
       </div>
-      <div class="stack-item">
-        <i class="fas fa-layer-group"></i>
+      <div class="stack-item" role="img" aria-label="Kafka">
+        <i class="fas fa-layer-group" aria-hidden="true"></i>
         <p><strong>Kafka</strong></p>
       </div>
     </div>
   </section>
 
   <!-- ARQUITECTURA -->
-  <section id="arquitectura">
-    <h2>Cómo diseño sistemas de pagos</h2>
+  <section id="arquitectura" aria-labelledby="arquitectura-title">
+    <h2 id="arquitectura-title">Cómo diseño sistemas de pagos</h2>
     <p>Arquitectura orientada a eventos para desacoplamiento de servicios, mejorar resiliencia y manejar cargas de alta concurrencia</p>
     
     <!-- Interactive Payment System Simulator -->
@@ -156,22 +276,22 @@
     <!-- Features Grid -->
     <div class="architecture-features-grid">
       <div class="feature-card">
-        <i class="fas fa-shield-alt"></i>
+        <i class="fas fa-shield-alt" aria-hidden="true"></i>
         <h4>Idempotencia</h4>
         <p>Evito transacciones duplicadas mediante claves únicas y validaciones en cada operación de pago.</p>
       </div>
       <div class="feature-card">
-        <i class="fas fa-arrows-alt"></i>
+        <i class="fas fa-arrows-alt" aria-hidden="true"></i>
         <h4>Concurrencia</h4>
         <p>Control de acceso simultáneo con locks optimistas y pesimistas para garantizar consistencia.</p>
       </div>
       <div class="feature-card">
-        <i class="fas fa-heartbeat"></i>
+        <i class="fas fa-heartbeat" aria-hidden="true"></i>
         <h4>Resiliencia</h4>
         <p>Implemento retries, circuit breakers y fallbacks para garantizar disponibilidad ante fallos.</p>
       </div>
       <div class="feature-card">
-        <i class="fas fa-lock"></i>
+        <i class="fas fa-lock" aria-hidden="true"></i>
         <h4>Seguridad</h4>
         <p>Autenticación, autorización con OAuth2, JWT y protección en endpoints críticos.</p>
       </div>
@@ -185,32 +305,32 @@
       </div>
       <div class="integrations-grid">
         <div class="integration-item">
-          <i class="fas fa-credit-card"></i>
+          <i class="fas fa-credit-card" aria-hidden="true"></i>
           <h4>Pasarelas de pago</h4>
           <p>Stripe, PayPal, Adyen y otros procesadores de pagos globales.</p>
         </div>
         <div class="integration-item">
-          <i class="fas fa-building-columns"></i>
+          <i class="fas fa-building-columns" aria-hidden="true"></i>
           <h4>Bancos</h4>
           <p>APIs bancarias para transferencias, consultas de saldo y validaciones.</p>
         </div>
         <div class="integration-item">
-          <i class="fas fa-mobile-alt"></i>
+          <i class="fas fa-mobile-alt" aria-hidden="true"></i>
           <h4>SMS y Email</h4>
           <p>Twilio, SendGrid para notificaciones y confirmaciones de transacciones.</p>
         </div>
         <div class="integration-item">
-          <i class="fas fa-chart-line"></i>
+          <i class="fas fa-chart-line" aria-hidden="true"></i>
           <h4>Analytics</h4>
           <p>Mixpanel, Segment para tracking de eventos y análisis de comportamiento.</p>
         </div>
         <div class="integration-item">
-          <i class="fas fa-cloud"></i>
+          <i class="fas fa-cloud" aria-hidden="true"></i>
           <h4>Cloud Storage</h4>
           <p>AWS S3, Google Cloud Storage para almacenamiento de documentos.</p>
         </div>
         <div class="integration-item">
-          <i class="fas fa-shield-alt"></i>
+          <i class="fas fa-shield-alt" aria-hidden="true"></i>
           <h4>Verificación</h4>
           <p>Servicios KYC, validación de identidad y detección de fraude.</p>
         </div>
@@ -219,40 +339,40 @@
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="contact-section">
-    <h2>¿Hablemos?</h2>
+  <section id="contacto" class="contact-section" aria-labelledby="contacto-title">
+    <h2 id="contacto-title">¿Hablemos?</h2>
     <p>Estoy abierto a nuevas oportunidades donde pueda aportar mis habilidades</p>
     <div class="contact-content">
       <p>Contáctame para discutir proyectos, colaboraciones o cualquier pregunta sobre arquitectura backend y fintech.</p>
       <a href="mailto:srdejo@gmail.com" class="btn btn-primary" style="width: 100%; justify-content: center;">
-        <i class="fas fa-envelope"></i> Enviar mensaje
+        <i class="fas fa-envelope" aria-hidden="true"></i> Enviar mensaje
       </a>
       <div class="contact-info">
         <div class="contact-item">
-          <i class="fas fa-map-marker-alt"></i>
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
           <span>Ocaña, Norte de Santander, Colombia</span>
         </div>
         <div class="contact-item">
-          <i class="fas fa-envelope"></i>
+          <i class="fas fa-envelope" aria-hidden="true"></i>
           <a href="mailto:srdejo@gmail.com">srdejo@gmail.com</a>
         </div>
         <div class="contact-item">
-          <i class="fab fa-linkedin"></i>
-          <a href="https://linkedin.com/in/srdejo" target="_blank">linkedin.com/in/srdejo</a>
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <a href="https://linkedin.com/in/srdejo" target="_blank" rel="noopener noreferrer">linkedin.com/in/srdejo</a>
         </div>
         <div class="contact-item">
-          <i class="fab fa-github"></i>
-          <a href="https://github.com/srdejo" target="_blank">github.com/srdejo</a>
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <a href="https://github.com/srdejo" target="_blank" rel="noopener noreferrer">github.com/srdejo</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2025 Daniel Jiménez. Todos los derechos reservados.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="src/js/script.js"></script>
 </body>
 </html>
