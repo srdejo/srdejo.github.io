@@ -14,7 +14,7 @@
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Daniel Jiménez | Senior Backend Engineer">
   <meta property="og:description" content="Ingeniero Backend Senior especializado en arquitectura de microservicios, fintech y sistemas de pago escalables.">
-  <meta property="og:image" content="https://srdejo.github.io/assets/og-image.png">
+  <meta property="og:image" content="https://srdejo.github.io/assets/landing/social-preview.png">
   <meta property="og:url" content="https://srdejo.github.io/">
   <meta property="og:locale" content="es_ES">
   <meta property="profile:first_name" content="Daniel">
@@ -24,19 +24,19 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Daniel Jiménez | Senior Backend Engineer">
   <meta name="twitter:description" content="Ingeniero Backend Senior especializado en arquitectura de microservicios, fintech y sistemas de pago escalables.">
-  <meta name="twitter:image" content="https://srdejo.github.io/assets/og-image.png">
+  <meta name="twitter:image" content="https://srdejo.github.io/assets/landing/social-preview.png">
   <meta name="twitter:creator" content="@srdejo">
   <meta name="twitter:site" content="@srdejo">
   <meta name="twitter:image:alt" content="Daniel Jiménez – Senior Backend Engineer &amp; Solution Architect">
 
   <meta property="og:site_name" content="Daniel Jiménez">
-  <meta property="og:image:secure_url" content="https://srdejo.github.io/assets/og-image.png">
+  <meta property="og:image:secure_url" content="https://srdejo.github.io/assets/landing/social-preview.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Daniel Jiménez – Senior Backend Engineer &amp; Solution Architect">
 
-  <meta name="theme-color" content="#0a1622">
+  <meta name="theme-color" content="#0A2233">
   <link rel="apple-touch-icon" href="favicon.png">
 
   <script type="application/ld+json">
@@ -65,464 +65,460 @@
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden;color:#1b2a38}
-    a{text-decoration:none;color:inherit}
-    ::selection{background:#1ecec0;color:#06121b}
-    .nav-burger{display:none}
-    .m-date{display:none}
-    @media(max-width:820px){
-      nav{padding:14px 20px !important}
-      [data-nav-links]{display:none !important}
-      [data-nav-links].open{display:flex !important;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(10,22,34,0.97);padding:16px 20px;gap:16px;border-bottom:1px solid rgba(30,206,192,0.12);z-index:100}
-      .nav-cv{display:none !important}
-      .nav-burger{display:flex !important}
-      .pad{padding-left:20px !important;padding-right:20px !important}
-      .hero-grid{grid-template-columns:1fr !important;padding:38px 20px 46px !important;gap:30px !important}
-      .hero-text{order:2;display:flex;flex-direction:column;align-items:center;text-align:center}
-      .hero-photo-col{order:1}
-      .hero-text h1{font-size:36px !important}
-      .hero-sub{font-size:19px !important}
-      .hero-cta{flex-direction:column !important;width:100% !important;flex-wrap:nowrap !important}
-      .hero-cta a{justify-content:center !important;width:100% !important}
-      #hero-photo{width:190px !important;height:190px !important;border-radius:50% !important}
-      .ring-1{width:218px !important;height:218px !important}
-      .ring-2{width:264px !important;height:264px !important}
-      .glow{width:200px !important;height:200px !important}
-      .g4{grid-template-columns:1fr 1fr !important}
-      .arch-card{margin:18px 16px !important;padding:30px 22px !important}
-      .exp-line{display:none !important}
-      .exp-row{grid-template-columns:1fr !important}
-      .exp-date,.exp-rail{display:none !important}
-      .exp-card{flex-direction:column !important;gap:14px !important;padding:20px !important}
-      .exp-logo{width:auto !important;height:auto !important;margin-bottom:2px}
-      .m-date{display:block !important}
-      .skills-grid{grid-template-columns:1fr 1fr !important}
-      .two-col{grid-template-columns:1fr !important;gap:36px !important}
-      .footer-grid{grid-template-columns:1fr !important;padding:38px 20px 26px !important}
-      .footer-cta{flex-direction:column !important;justify-content:stretch !important}
-      .footer-cta a{justify-content:center !important;width:100% !important}
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
+<div class="page" id="inicio" data-section-id="inicio">
 
-  <!-- ===== NAV ===== -->
-  <header style="position:sticky;top:0;z-index:50;background:rgba(10,22,34,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(30,206,192,0.12)">
-    <nav style="max-width:1200px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between">
-      <a href="#inicio" style="display:flex;align-items:center;gap:9px;font-family:'Sora',sans-serif;font-weight:700;font-size:19px;color:#fff;letter-spacing:-0.02em">
-        <span style="color:#1ecec0;font-family:monospace;font-size:18px">&lt;/&gt;</span>srdejo
-      </a>
-      <div style="display:flex;align-items:center;gap:30px">
-        <button class="nav-burger" aria-label="Menú" onclick="document.querySelector('[data-nav-links]').classList.toggle('open')" style="flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px">
-          <span style="width:24px;height:2px;background:#fff;border-radius:2px;display:block"></span>
-          <span style="width:24px;height:2px;background:#fff;border-radius:2px;display:block"></span>
-          <span style="width:24px;height:2px;background:#fff;border-radius:2px;display:block"></span>
-        </button>
-        <div style="display:flex;gap:28px;font-size:14.5px;font-weight:500" data-nav-links>
-          <a href="#experiencia" style="color:#aebccb">Experiencia</a>
-          <a href="#arquitectura" style="color:#aebccb">Arquitectura</a>
-          <a href="#habilidades" style="color:#aebccb">Habilidades</a>
-          <a href="#formacion" style="color:#aebccb">Formación</a>
-          <a href="#contacto" style="color:#aebccb">Contacto</a>
-        </div>
-        <a href="HV Completa.pdf" download class="nav-cv" style="padding:10px 20px;border:1px solid rgba(30,206,192,0.4);border-radius:8px;color:#fff;font-size:14px;font-weight:600">Descargar CV</a>
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#inicio" class="nav-brand">Daniel Jiménez</a>
+    <div class="nav-links">
+      <a href="#inicio" class="nav-link active" data-section="inicio">Inicio</a>
+      <a href="#sobre-mi" class="nav-link" data-section="sobre-mi">Sobre mí</a>
+      <a href="#experiencia" class="nav-link" data-section="experiencia">Experiencia</a>
+      <a href="#habilidades" class="nav-link" data-section="habilidades">Habilidades</a>
+      <a href="#proyectos" class="nav-link" data-section="proyectos">Proyectos</a>
+      <a href="#formacion" class="nav-link" data-section="formacion">Formación</a>
+      <a href="#contacto" class="nav-link" data-section="contacto">Contacto</a>
+    </div>
+    <button class="theme-toggle" data-theme-toggle aria-label="Cambiar tema">
+      <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"></path></svg>
+      <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"></circle><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path></svg>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" data-section-id="inicio">
+    <div class="hero-content">
+      <div class="hero-kicker"><span class="dot"></span>SENIOR BACKEND ENGINEER</div>
+      <h1>Daniel Eduardo<br>Jiménez Ovallos</h1>
+      <p class="hero-desc">Construyo software para el sector financiero — pagos, recaudos, banca y tarjetas de crédito — con más de 7 años de experiencia en Java, Spring Boot, microservicios y AWS.</p>
+      <div class="hero-tags">
+        <span>Cloud &amp; Solution Architecture</span><span class="sep">|</span>
+        <span>Java</span><span class="sep">|</span>
+        <span>AWS</span><span class="sep">|</span>
+        <span>Microservicios</span>
       </div>
-    </nav>
+      <div class="hero-actions">
+        <a href="Hoja de Vida Daniel Jimenez - Julio 2026.pdf" target="_blank" class="btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0A2233" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>
+          Descargar CV
+        </a>
+        <a href="#contacto" class="btn-outline">Escríbeme</a>
+        <a href="https://wa.me/573127655754?text=Hola%20Daniel%2C%20vi%20tu%20landing%20y%20quiero%20contactarte." target="_blank" class="btn-circle" aria-label="WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.77.46 3.42 1.27 4.86L2 22l5.36-1.4a9.9 9.9 0 0 0 4.68 1.19h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7-1.87-1.87-4.35-2.9-7.01-2.9zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.25-4.36c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.17 8.17 0 0 1 2.41 5.83c0 4.55-3.7 8.21-8.24 8.21zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.47-1.37-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.36-.77-1.86-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.89 2.41 1.02 2.58.12.17 1.74 2.67 4.24 3.73.59.26 1.05.41 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"></path></svg>
+        </a>
+      </div>
+    </div>
+    <img src="assets/landing/perfil-avatar-v3.png" alt="Daniel Jiménez" class="hero-photo">
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section id="inicio" style="position:relative;background:radial-gradient(120% 90% at 78% 38%,rgba(30,206,192,0.16),transparent 55%),linear-gradient(160deg,#0a1622 0%,#091824 55%,#08151f 100%);color:#fff;overflow:hidden">
-    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.05) 1px,transparent 1px);background-size:34px 34px;opacity:0.5"></div>
-    <div style="position:absolute;right:0;top:0;width:60%;height:100%;background:radial-gradient(60% 60% at 65% 45%,rgba(30,206,192,0.10),transparent 70%)"></div>
-    <div class="hero-grid" style="position:relative;max-width:1200px;margin:0 auto;padding:70px 32px 80px;display:grid;grid-template-columns:1.15fr 0.85fr;gap:40px;align-items:center">
-      <div class="hero-text">
-        <div style="display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border:1px solid rgba(30,206,192,0.35);border-radius:999px;background:rgba(30,206,192,0.07);margin-bottom:28px">
-          <span style="width:8px;height:8px;border-radius:50%;background:#1ecec0;box-shadow:0 0 10px #1ecec0"></span>
-          <span style="font-size:11.5px;font-weight:600;letter-spacing:0.12em;color:#1ecec0">DISPONIBLE PARA NUEVOS DESAFÍOS</span>
-        </div>
-        <h1 style="font-family:'Sora',sans-serif;font-weight:700;font-size:54px;line-height:1.05;letter-spacing:-0.025em;margin-bottom:20px">Daniel Eduardo<br>Jiménez Ovallos</h1>
-        <p class="hero-sub" style="font-family:'Sora',sans-serif;font-weight:600;font-size:23px;color:#1ecec0;margin-bottom:22px">Senior Backend Engineer &amp;<br>Solution Architect</p>
-        <p style="font-size:15.5px;line-height:1.7;color:#9fb0c0;max-width:430px;margin-bottom:34px">Especializado en el diseño y desarrollo de soluciones financieras escalables, seguras y de alta disponibilidad. 7+ años construyendo plataformas de pagos, recaudos y crédito en entornos <strong style="color:#cfdae4;font-weight:700">cloud</strong>.</p>
-        <div class="hero-cta" style="display:flex;gap:14px;flex-wrap:wrap">
-          <a href="#experiencia" style="display:inline-flex;align-items:center;gap:10px;padding:14px 24px;background:#1ecec0;color:#06121b;font-weight:700;font-size:14.5px;border-radius:9px;box-shadow:0 8px 24px rgba(30,206,192,0.28)">Ver mi experiencia <span style="font-size:16px">↓</span></a>
-          <a href="HV Completa.pdf" download style="display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border:1px solid rgba(255,255,255,0.22);color:#fff;font-weight:600;font-size:14.5px;border-radius:9px">Descargar CV <span>⤓</span></a>
+  <!-- SOBRE MI -->
+  <section id="sobre-mi" data-section-id="sobre-mi" data-reveal class="section section-narrow">
+    <div class="section-eyebrow"><span class="line"></span><h2>SOBRE MÍ</h2></div>
+    <p class="about-lead">Soy ingeniero de sistemas con especialización en auditoría de sistemas, y llevo más de 7 años construyendo software para el sector financiero. Me especializo en Java, Spring Boot, microservicios, integración de APIs y soluciones en la nube sobre AWS.</p>
+    <p class="about-body">He trabajado en proyectos de pagos, recaudos, banca y tarjetas de crédito, y complemento mi día a día con Angular, TypeScript, PostgreSQL, Docker, Terraform, Git y SonarQube. Mi inglés está en nivel básico (A2) y actualmente estoy dando mis primeros pasos en Specification-Driven Development.</p>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section id="experiencia" data-section-id="experiencia" class="section section-alt">
+    <div class="section-narrow">
+      <div class="section-eyebrow"><span class="line"></span><h2>EXPERIENCIA PROFESIONAL</h2></div>
+
+      <div class="timeline-item" data-reveal>
+        <div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-body">
+          <div class="card">
+            <div class="role-head">
+              <div>
+                <div class="role-title">Backend Engineer</div>
+                <div class="role-meta"><strong>Vectora – Fintech</strong> · Plataforma MOUV (Pagos y Recaudos)</div>
+              </div>
+              <div class="role-side">
+                <span class="role-period">04/2025 – 03/2026</span>
+                <img src="assets/landing/dl-mouv-dark.png" alt="Mouv" class="role-logo">
+              </div>
+            </div>
+            <ul class="role-bullets">
+              <li>Construyo la plataforma de pagos y recaudos de Mouv, integrando múltiples proveedores a través de APIs REST.</li>
+              <li>Desarrollo servicios backend con Java y Spring Boot, modelando y optimizando datos en PostgreSQL.</li>
+              <li>Implemento autenticación con Spring Security y AWS Cognito, y proceso eventos de forma asíncrona con AWS SQS (EDA).</li>
+              <li>Despliego y monitoreo la infraestructura en AWS (ECS, CloudWatch) usando Terraform como infraestructura como código.</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="hero-photo-col" style="position:relative;display:flex;justify-content:center;align-items:center">
-        <div class="ring-1" style="position:absolute;width:330px;height:330px;border-radius:50%;border:1px solid rgba(30,206,192,0.18)"></div>
-        <div class="ring-2" style="position:absolute;width:420px;height:420px;border-radius:50%;border:1px solid rgba(30,206,192,0.10)"></div>
-        <div class="glow" style="position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(30,206,192,0.22),transparent 65%)"></div>
-        <img id="hero-photo" src="assets/perfil.png" alt="Daniel Jiménez" style="position:relative;width:330px;height:380px;z-index:2;object-fit:cover;border-radius:14px">
+
+      <div class="timeline-item" data-reveal>
+        <div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-body">
+          <div class="card">
+            <div class="role-head">
+              <div>
+                <div class="role-title">Senior Tech Developer / Arquitecto</div>
+                <div class="role-meta"><strong>Sempli SAS – Fintech</strong> · Plataforma Tarjeta de Crédito</div>
+              </div>
+              <div class="role-side">
+                <span class="role-period">02/2023 – 02/2025</span>
+                <img src="assets/landing/dl-sempli.png" alt="Sempli" class="role-logo">
+              </div>
+            </div>
+            <ul class="role-bullets">
+              <li>Lidero técnicamente y diseño la arquitectura de la plataforma de tarjeta de crédito de la compañía.</li>
+              <li>Desarrollo el backend con Java y Spring Boot, y el frontend con Angular y TypeScript.</li>
+              <li>Diseño APIs REST y SOAP, documento la solución e integro servicios externos.</li>
+              <li>Escribo pruebas unitarias con JUnit y Mockito, y mantengo la calidad del código con SonarQube.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-reveal>
+        <div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-body">
+          <div class="card">
+            <div class="role-head">
+              <div>
+                <div class="role-title">Arquitecto de Software</div>
+                <div class="role-meta"><strong>Ceiba – Fintech (Scotiabank Colpatria)</strong> · Soluciones Financieras</div>
+              </div>
+              <div class="role-side">
+                <span class="role-period">07/2021 – 02/2023</span>
+                <img src="assets/landing/logo-ceiba.png" alt="Ceiba" class="role-logo">
+              </div>
+            </div>
+            <ul class="role-bullets">
+              <li>Trabajo como arquitecto de software en iniciativas bancarias para Colombia, México y Canadá.</li>
+              <li>Construyo soluciones backend con Java 11/17 y Spring Boot, con integraciones bancarias vía REST y SOAP.</li>
+              <li>Modelo datos en PostgreSQL y cuido la calidad con SonarQube, JUnit y Mockito.</li>
+              <li>Gestiono artefactos con Artifactory, CI/CD y aplico seguridad bajo el estándar OWASP Top 10.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-reveal>
+        <div class="timeline-rail"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-body">
+          <div class="card">
+            <div class="role-head">
+              <div>
+                <div class="role-title">Desarrollador Senior – Team Lead</div>
+                <div class="role-meta"><strong>WPOSS – Soluciones Transaccionales</strong> · Medios de Pago (POS)</div>
+              </div>
+              <div class="role-side">
+                <span class="role-period">11/2020 – 06/2021</span>
+                <img src="assets/landing/dl-wposs-icon.png" alt="WPOSS" class="role-logo">
+              </div>
+            </div>
+            <ul class="role-bullets">
+              <li>Lidero como Team Lead el desarrollo de aplicaciones distribuidas basadas en microservicios.</li>
+              <li>Implemento comunicación con dispositivos POS bajo el estándar ISO 8583.</li>
+              <li>Gestiono relaciones con clientes internacionales del sector bancario, como BCP.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-reveal>
+        <div class="timeline-rail"><div class="timeline-dot"></div></div>
+        <div class="timeline-body">
+          <div class="card">
+            <div class="role-head">
+              <div>
+                <div class="role-title">Analista de Sistemas Junior</div>
+                <div class="role-meta"><strong>Crediservir – Sector Financiero</strong> · Sistemas de Información</div>
+              </div>
+              <div class="role-side">
+                <span class="role-period">02/2019 – 10/2020</span>
+                <img src="assets/landing/dl-crediservir-trim.png" alt="Crediservir" class="role-logo">
+              </div>
+            </div>
+            <ul class="role-bullets">
+              <li>Desarrollo y doy mantenimiento a sistemas de información para el sector financiero.</li>
+              <li>Construyo aplicaciones con GeneXus (low-code) y APIs con Java y Spring Boot.</li>
+              <li>Modelo datos en PostgreSQL con foco en seguridad, siguiendo OWASP Top 10.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal>
+        <h3 class="extras-title">Experiencia adicional</h3>
+        <div class="extras-grid">
+          <div class="extra-card">
+            <div class="extra-org">IE Colegio Monseñor Díaz Plata</div>
+            <div class="extra-role">Docente</div>
+            <div class="extra-desc">Formación académica en áreas relacionadas con tecnología y sistemas.</div>
+          </div>
+          <div class="extra-card">
+            <div class="extra-org">UFPSO</div>
+            <div class="extra-role">Soporte Plataforma SID</div>
+            <div class="extra-desc">Soporte funcional y técnico de la plataforma institucional SID.</div>
+          </div>
+          <div class="extra-card">
+            <div class="extra-org">TMSOFT</div>
+            <div class="extra-role">Desarrollador Junior</div>
+            <div class="extra-desc">Participación en desarrollo y mantenimiento de aplicaciones empresariales.</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== IMPACTO EN NÚMEROS ===== -->
-  <section style="background:#fff;padding:54px 0 10px">
-    <div class="pad" style="max-width:1200px;margin:0 auto;padding:0 32px">
-      <p style="font-size:12px;font-weight:700;letter-spacing:0.16em;color:#0f8e84;margin-bottom:24px">IMPACTO EN NÚMEROS</p>
-      <div class="g4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px">
-
-        <div style="border:1px solid #e6ebf1;border-radius:14px;padding:26px 24px;background:#fff">
-          <div style="color:#1ab3a8;margin-bottom:18px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
-          <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:25px;color:#16242f;margin-bottom:6px">+7 años</div>
-          <div style="font-size:13.5px;line-height:1.5;color:#62707e">de experiencia en desarrollo de software</div>
+  <!-- HABILIDADES -->
+  <section id="habilidades" data-section-id="habilidades" class="section">
+    <div class="section-wide">
+      <div class="section-eyebrow"><span class="line"></span><h2>HABILIDADES TÉCNICAS</h2></div>
+      <div class="skills-grid">
+        <div class="skill-card" data-reveal>
+          <div class="skill-head">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="1.5"></rect><rect x="3" y="13" width="18" height="7" rx="1.5"></rect></svg>
+            <div class="skill-title">Backend</div>
+          </div>
+          <div class="skill-list">Java (8, 11, 17, 21) · Spring Boot · Spring Security · REST · SOAP · Microservicios · EDA</div>
         </div>
-
-        <div style="border:1px solid #e6ebf1;border-radius:14px;padding:26px 24px;background:#fff">
-          <div style="color:#1ab3a8;margin-bottom:18px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M4 21V10m4 11V10m8 11V10m4 11V10M2 10l10-6 10 6"/></svg></div>
-          <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:25px;color:#16242f;margin-bottom:6px">4 compañías</div>
-          <div style="font-size:13.5px;line-height:1.5;color:#62707e">fintech y sector financiero</div>
+        <div class="skill-card" data-reveal>
+          <div class="skill-head">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>
+            <div class="skill-title">Frontend</div>
+          </div>
+          <div class="skill-list">Angular · TypeScript · HTML · CSS · JavaScript</div>
         </div>
-
-        <div style="border:1px solid #e6ebf1;border-radius:14px;padding:26px 24px;background:#fff">
-          <div style="color:#1ab3a8;margin-bottom:18px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 7h13l-3-3M17 17H4l3 3"/></svg></div>
-          <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:25px;color:#16242f;margin-bottom:6px">Sistemas críticos</div>
-          <div style="font-size:13.5px;line-height:1.5;color:#62707e">de pagos, recaudos y crédito</div>
+        <div class="skill-card" data-reveal>
+          <div class="skill-head">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"></path><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path></svg>
+            <div class="skill-title">Bases de Datos</div>
+          </div>
+          <div class="skill-list">PostgreSQL · Oracle · Cassandra · Redis</div>
         </div>
-
-        <div style="border:1px solid #e6ebf1;border-radius:14px;padding:26px 24px;background:#fff">
-          <div style="color:#1ab3a8;margin-bottom:18px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M18 18a4 4 0 0 0 0-8 6 6 0 0 0-11.7-1.5A3.5 3.5 0 0 0 6.5 18z"/></svg></div>
-          <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:25px;color:#16242f;margin-bottom:6px">AWS</div>
-          <div style="font-size:13.5px;line-height:1.5;color:#62707e">Experiencia sólida en arquitectura cloud</div>
+        <div class="skill-card" data-reveal>
+          <div class="skill-head">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 .4-9A7 7 0 0 0 4.3 12.5 3.5 3.5 0 0 0 6.5 19z"></path></svg>
+            <div class="skill-title">Cloud &amp; DevOps</div>
+          </div>
+          <div class="skill-list">AWS (ECS, EC2, SQS, Cognito, CloudWatch) · Terraform · Docker · Git · Artifactory</div>
         </div>
+      </div>
 
+      <div class="subsection-title-row"><span class="line" style="width:30px;height:2px;background:var(--accent2);"></span><h3 style="margin:0;font-size:12.5px;font-weight:800;letter-spacing:2px;color:var(--accent2);">HERRAMIENTAS</h3></div>
+      <div class="skills-grid">
+        <div class="skill-card" data-reveal>
+          <div class="skill-head">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z"></path><path d="M9 12l2 2 4-4"></path></svg>
+            <div class="skill-title">Calidad de Código</div>
+          </div>
+          <div class="skill-list">JUnit · Mockito · SonarQube</div>
+        </div>
+        <div class="skill-card" data-reveal>
+          <div class="skill-head">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L17 14a4 4 0 0 1-5.7 0L4 21l-1-1 7.3-7.3A4 4 0 0 1 10 7l2.7-2.7a4 4 0 0 1 2-1z"></path></svg>
+            <div class="skill-title">Herramientas de Desarrollo</div>
+          </div>
+          <div class="skill-list">IntelliJ IDEA · VS Code · DataGrip · Postman · Swagger · Jira · Confluence · Figma</div>
+        </div>
+        <div class="skill-card" data-reveal>
+          <div class="skill-head">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path><circle cx="12" cy="12" r="3.2"></circle></svg>
+            <div class="skill-title">IA</div>
+          </div>
+          <div class="skill-list">Claude Code · Claude Design · Kiro</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== EXPERIENCIA PROFESIONAL ===== -->
-  <section id="experiencia" style="background:#fff;padding:54px 0 40px">
-    <div class="pad" style="max-width:1200px;margin:0 auto;padding:0 32px">
-      <p style="font-size:12px;font-weight:700;letter-spacing:0.16em;color:#0f8e84;margin-bottom:30px">EXPERIENCIA PROFESIONAL</p>
-      <div style="position:relative">
-        <div class="exp-line" style="position:absolute;left:138px;top:14px;bottom:14px;width:2px;background:#e6ebf1"></div>
-        <div style="display:flex;flex-direction:column;gap:18px">
+  <!-- PROYECTOS -->
+  <section id="proyectos" data-section-id="proyectos" class="section section-alt">
+    <div class="section-narrow">
+      <div class="section-eyebrow"><span class="line"></span><h2>PROYECTOS PERSONALES</h2></div>
 
-          <!-- Vectora / MOUV -->
-          <div class="exp-row" style="display:grid;grid-template-columns:108px 30px 1fr;align-items:start;gap:0">
-            <div class="exp-date" style="font-size:13px;font-weight:600;color:#62707e;line-height:1.5;padding-top:24px;white-space:pre-line">04/2025 –
-03/2026</div>
-            <div class="exp-rail" style="position:relative;display:flex;justify-content:center;padding-top:30px">
-              <div style="width:13px;height:13px;border-radius:50%;background:#0a1622;border:3px solid #1ecec0;z-index:2"></div>
-            </div>
-            <div class="exp-card" style="border:1px solid #e6ebf1;border-radius:14px;padding:22px 24px;background:#fff;display:flex;gap:22px;align-items:flex-start">
-              <div class="exp-logo" style="width:108px;flex:none;display:flex;align-items:center;height:34px">
-                <span style="font-family:Sora,sans-serif;font-weight:800;font-size:19px;color:#1ecec0;letter-spacing:-0.02em">mouv</span>
-              </div>
-              <div style="flex:1">
-                <div class="m-date" style="font-size:12px;font-weight:600;color:#1ab3a8;margin-bottom:7px">04/2025 – 03/2026</div>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:14px">
-                  <div>
-                    <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:16px;color:#16242f;margin-bottom:3px">Backend Engineer</div>
-                    <div style="font-size:13.5px;color:#1ab3a8;font-weight:600;margin-bottom:9px"><strong style="color:#16242f">Vectora</strong> – Plataforma MOUV (Pagos y Recaudos)</div>
-                  </div>
-                  <span style="flex:none;font-size:11.5px;font-weight:600;color:#5a6b79;background:#eef2f6;padding:5px 12px;border-radius:999px">Fintech</span>
-                </div>
-                <p style="font-size:13.5px;line-height:1.6;color:#62707e;max-width:560px">Desarrollo de la plataforma de pagos y recaudos para la integración con múltiples proveedores. Servicios con Java y Spring Boot, arquitectura basada en eventos, AWS (SQS, ECS, Cognito, CloudWatch), PostgreSQL y Terraform.</p>
-              </div>
-            </div>
+      <div class="project-card" data-reveal>
+        <img src="assets/landing/steward-icon.png" alt="Steward" class="project-icon">
+        <div class="project-body">
+          <div class="project-name-row">
+            <div class="project-name">Steward</div>
+            <div class="project-subtitle">App iOS de finanzas personales</div>
           </div>
-
-          <!-- Sempli -->
-          <div class="exp-row" style="display:grid;grid-template-columns:108px 30px 1fr;align-items:start;gap:0">
-            <div class="exp-date" style="font-size:13px;font-weight:600;color:#62707e;line-height:1.5;padding-top:24px;white-space:pre-line">02/2023 –
-02/2025</div>
-            <div class="exp-rail" style="position:relative;display:flex;justify-content:center;padding-top:30px">
-              <div style="width:13px;height:13px;border-radius:50%;background:#0a1622;border:3px solid #1ecec0;z-index:2"></div>
-            </div>
-            <div class="exp-card" style="border:1px solid #e6ebf1;border-radius:14px;padding:22px 24px;background:#fff;display:flex;gap:22px;align-items:flex-start">
-              <div class="exp-logo" style="width:108px;flex:none;display:flex;align-items:center;height:34px">
-                <span style="font-family:Sora,sans-serif;font-weight:800;font-size:19px;color:#6c5ce7;letter-spacing:-0.02em">sempli.</span>
-              </div>
-              <div style="flex:1">
-                <div class="m-date" style="font-size:12px;font-weight:600;color:#1ab3a8;margin-bottom:7px">02/2023 – 02/2025</div>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:14px">
-                  <div>
-                    <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:16px;color:#16242f;margin-bottom:3px">Senior Tech Developer / Arquitecto</div>
-                    <div style="font-size:13.5px;color:#1ab3a8;font-weight:600;margin-bottom:9px"><strong style="color:#16242f">Sempli SAS</strong> – Plataforma Tarjeta de Crédito</div>
-                  </div>
-                  <span style="flex:none;font-size:11.5px;font-weight:600;color:#5a6b79;background:#eef2f6;padding:5px 12px;border-radius:999px">Fintech</span>
-                </div>
-                <p style="font-size:13.5px;line-height:1.6;color:#62707e;max-width:560px">Líder técnico y arquitecto. Desarrollo backend con Java y Spring Boot, APIs REST, servicios externos, Angular y TypeScript. Pruebas unitarias, SonarQube y buenas prácticas de calidad.</p>
-              </div>
-            </div>
+          <p class="project-desc">Construí esta app para presupuestar, controlar gastos, administrar créditos y calcular el diezmo — de punta a punta, aplicando Specification-Driven Development desde el diseño hasta el desarrollo.</p>
+          <div class="project-tags">
+            <span class="project-tag">React Native</span>
+            <span class="project-tag">iOS</span>
+            <span class="project-tag">Specification-Driven Development</span>
+            <span class="project-tag">Código abierto</span>
           </div>
-
-          <!-- Scotiabank Colpatria -->
-          <div class="exp-row" style="display:grid;grid-template-columns:108px 30px 1fr;align-items:start;gap:0">
-            <div class="exp-date" style="font-size:13px;font-weight:600;color:#62707e;line-height:1.5;padding-top:24px;white-space:pre-line">07/2021 –
-02/2023</div>
-            <div class="exp-rail" style="position:relative;display:flex;justify-content:center;padding-top:30px">
-              <div style="width:13px;height:13px;border-radius:50%;background:#0a1622;border:3px solid #1ecec0;z-index:2"></div>
-            </div>
-            <div class="exp-card" style="border:1px solid #e6ebf1;border-radius:14px;padding:22px 24px;background:#fff;display:flex;gap:22px;align-items:flex-start">
-              <div class="exp-logo" style="width:108px;flex:none;display:flex;align-items:center;height:34px">
-                <span style="font-family:Sora,sans-serif;font-weight:800;font-size:13px;color:#e3001b;line-height:1.05">Scotiabank<br><span style="color:#b5001a">COLPATRIA</span></span>
-              </div>
-              <div style="flex:1">
-                <div class="m-date" style="font-size:12px;font-weight:600;color:#1ab3a8;margin-bottom:7px">07/2021 – 02/2023</div>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:14px">
-                  <div>
-                    <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:16px;color:#16242f;margin-bottom:3px">Arquitecto de Software</div>
-                    <div style="font-size:13.5px;color:#1ab3a8;font-weight:600;margin-bottom:9px"><strong style="color:#16242f">Ceiba – Fintech (Scotiabank Colpatria)</strong> – Soluciones Financieras</div>
-                  </div>
-                  <span style="flex:none;font-size:11.5px;font-weight:600;color:#5a6b79;background:#eef2f6;padding:5px 12px;border-radius:999px">Financiero</span>
-                </div>
-                <p style="font-size:13.5px;line-height:1.6;color:#62707e;max-width:560px">Arquitectura y desarrollo de soluciones bancarias. Java 11/17, Spring Boot, REST, SOAP, PostgreSQL, SonarQube, JUnit, Mockito, Git, AWS.</p>
-              </div>
-            </div>
+          <div class="project-links">
+            <a href="https://github.com/srdejo/steward" target="_blank" class="project-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.3.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.6 11.6 0 0 1 6.2 0c2.4-1.6 3.4-1.2 3.4-1.2.7 1.6.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.7 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"></path></svg>
+              github.com/srdejo/steward
+            </a>
+            <a href="https://apps.apple.com/us/app/steward/id6783429254" target="_blank" class="project-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 1.5c.1 1.2-.4 2.4-1.1 3.3-.7.9-1.9 1.6-3 1.5-.1-1.2.4-2.4 1.1-3.2.8-.9 2-1.5 3-1.6zM20 17.2c-.4 1-.9 1.9-1.6 2.8-.9 1.2-1.9 2.6-3.3 2.6-1.3 0-1.7-.8-3.2-.8s-2 .8-3.2.8c-1.3.1-2.4-1.4-3.3-2.5-1.8-2.5-3.2-7.1-1.3-10.2 1-1.6 2.7-2.6 4.5-2.6 1.3 0 2.6.9 3.2.9.7 0 2.2-1.1 3.8-.9.6 0 2.5.3 3.7 2-.1.1-2.2 1.3-2.2 3.8 0 3 2.6 4 2.9 4.1z"></path></svg>
+              Descargar en App Store
+            </a>
           </div>
-
-          <!-- Crediservir -->
-          <div class="exp-row" style="display:grid;grid-template-columns:108px 30px 1fr;align-items:start;gap:0">
-            <div class="exp-date" style="font-size:13px;font-weight:600;color:#62707e;line-height:1.5;padding-top:24px;white-space:pre-line">01/2020 –
-06/2021</div>
-            <div class="exp-rail" style="position:relative;display:flex;justify-content:center;padding-top:30px">
-              <div style="width:13px;height:13px;border-radius:50%;background:#0a1622;border:3px solid #1ecec0;z-index:2"></div>
-            </div>
-            <div class="exp-card" style="border:1px solid #e6ebf1;border-radius:14px;padding:22px 24px;background:#fff;display:flex;gap:22px;align-items:flex-start">
-              <div class="exp-logo" style="width:108px;flex:none;display:flex;align-items:center;height:34px">
-                <span style="font-family:Sora,sans-serif;font-weight:700;font-size:19px;color:#7a8794;letter-spacing:-0.02em">crediservir</span>
-              </div>
-              <div style="flex:1">
-                <div class="m-date" style="font-size:12px;font-weight:600;color:#1ab3a8;margin-bottom:7px">01/2020 – 06/2021</div>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:14px">
-                  <div>
-                    <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:16px;color:#16242f;margin-bottom:3px">Analista de Sistemas Junior</div>
-                    <div style="font-size:13.5px;color:#1ab3a8;font-weight:600;margin-bottom:9px"><strong style="color:#16242f">Crediservir</strong> – Sector Financiero</div>
-                  </div>
-                  <span style="flex:none;font-size:11.5px;font-weight:600;color:#5a6b79;background:#eef2f6;padding:5px 12px;border-radius:999px">Financiero</span>
-                </div>
-                <p style="font-size:13.5px;line-height:1.6;color:#62707e;max-width:560px">Mantenimiento y desarrollo de sistemas financieros. Java, Spring Boot, GeneXus (Low Code) y PostgreSQL.</p>
-              </div>
-            </div>
-          </div>
-
         </div>
+        <a href="https://apps.apple.com/us/app/steward/id6783429254" target="_blank" style="flex:none;align-self:flex-start;display:flex;flex-direction:column;align-items:center;gap:4px;">
+          <img src="assets/landing/steward-appstore-qr.png" alt="QR descargar Steward en App Store" style="width:76px;height:76px;border-radius:8px;border:1px solid var(--card-border);background:#fff;padding:4px;">
+          <span style="font-size:9.5px;font-weight:700;color:var(--text-muted);">Escanea para descargar</span>
+        </a>
       </div>
-      <div style="display:flex;justify-content:center;margin-top:30px">
-        <a href="HV Completa.pdf" download style="padding:11px 22px;border:1px solid #d6dde5;border-radius:9px;font-size:13.5px;font-weight:600;color:#3a4855">Ver experiencia adicional</a>
+
+      <div class="project-card" data-reveal>
+        <img src="assets/landing/logo-catalog-studio-icon.png" alt="Catalog Studio" class="project-icon" style="background:#fff;padding:8px;">
+        <div class="project-body">
+          <div class="project-name-row">
+            <div class="project-name">Catalog Studio</div>
+            <div class="project-subtitle">App de escritorio Windows</div>
+          </div>
+          <p class="project-desc">Una app de escritorio que carga el catálogo de un proveedor, lee automáticamente todos los productos y me permite seleccionar y ajustar precios para generar el catálogo final que envío a mis clientes.</p>
+          <div class="project-tags">
+            <span class="project-tag">React</span>
+            <span class="project-tag">Electron</span>
+            <span class="project-tag">Windows</span>
+            <span class="project-tag">Specification-Driven Development</span>
+          </div>
+          <a href="https://github.com/srdejo/catalog-studio" target="_blank" class="project-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.3.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.6 11.6 0 0 1 6.2 0c2.4-1.6 3.4-1.2 3.4-1.2.7 1.6.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.7 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"></path></svg>
+            github.com/srdejo/catalog-studio
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CÓMO DISEÑO SOLUCIONES ===== -->
-  <section id="arquitectura" style="background:#0a1622;padding:8px 0">
-    <div class="arch-card" style="max-width:1200px;margin:24px auto;padding:44px 40px;background:linear-gradient(160deg,#0c1c2a,#0a1825);border:1px solid rgba(30,206,192,0.1);border-radius:18px">
-      <p style="font-size:12px;font-weight:700;letter-spacing:0.16em;color:#1ecec0;margin-bottom:30px">CÓMO DISEÑO <span style="color:#fff">SOLUCIONES</span></p>
-      <div class="g4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px">
-
-        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:24px 22px">
-          <div style="color:#1ecec0;margin-bottom:16px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V5z"/></svg></div>
-          <div style="font-family:'Sora',sans-serif;font-weight:600;font-size:15px;color:#fff;margin-bottom:14px">1. Seguridad primero</div>
-          <div style="display:flex;flex-direction:column;gap:7px">
-            <div style="font-size:13px;color:#92a3b3">OAuth2 / JWT</div>
-            <div style="font-size:13px;color:#92a3b3">Spring Security</div>
-            <div style="font-size:13px;color:#92a3b3">AWS Cognito</div>
-            <div style="font-size:13px;color:#92a3b3">Buenas prácticas</div>
-          </div>
-        </div>
-
-        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:24px 22px">
-          <div style="color:#1ecec0;margin-bottom:16px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5M3 17l9 5 9-5"/></svg></div>
-          <div style="font-family:'Sora',sans-serif;font-weight:600;font-size:15px;color:#fff;margin-bottom:14px">2. Escalabilidad</div>
-          <div style="display:flex;flex-direction:column;gap:7px">
-            <div style="font-size:13px;color:#92a3b3">Microservicios</div>
-            <div style="font-size:13px;color:#92a3b3">Arquitectura orientada a eventos (EDA)</div>
-            <div style="font-size:13px;color:#92a3b3">Procesamiento asíncrono</div>
-          </div>
-        </div>
-
-        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:24px 22px">
-          <div style="color:#1ecec0;margin-bottom:16px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
-          <div style="font-family:'Sora',sans-serif;font-weight:600;font-size:15px;color:#fff;margin-bottom:14px">3. Resiliencia</div>
-          <div style="display:flex;flex-direction:column;gap:7px">
-            <div style="font-size:13px;color:#92a3b3">Retries y Timeouts</div>
-            <div style="font-size:13px;color:#92a3b3">Circuit Breaker</div>
-            <div style="font-size:13px;color:#92a3b3">Idempotencia</div>
-            <div style="font-size:13px;color:#92a3b3">Manejo de fallos</div>
-          </div>
-        </div>
-
-        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:24px 22px">
-          <div style="color:#1ecec0;margin-bottom:16px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-          <div style="font-family:'Sora',sans-serif;font-weight:600;font-size:15px;color:#fff;margin-bottom:14px">4. Observabilidad</div>
-          <div style="display:flex;flex-direction:column;gap:7px">
-            <div style="font-size:13px;color:#92a3b3">Logs estructurados</div>
-            <div style="font-size:13px;color:#92a3b3">Métricas y Alertas</div>
-            <div style="font-size:13px;color:#92a3b3">Trazabilidad</div>
-            <div style="font-size:13px;color:#92a3b3">Auditoría</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== HABILIDADES TÉCNICAS ===== -->
-  <section id="habilidades" style="background:#fff;padding:54px 0 44px">
-    <div class="pad" style="max-width:1200px;margin:0 auto;padding:0 32px">
-      <p style="font-size:12px;font-weight:700;letter-spacing:0.16em;color:#0f8e84;margin-bottom:30px">HABILIDADES TÉCNICAS</p>
-      <div class="skills-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:20px">
-
-        <div style="border:1px solid #e6ebf1;border-radius:14px;padding:22px 20px">
-          <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px">
-            <span style="color:#1ab3a8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span>
-            <span style="font-family:'Sora',sans-serif;font-weight:600;font-size:14.5px;color:#16242f">Backend</span>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:9px">
-            <div style="font-size:13.5px;color:#62707e">Java (8, 11, 17, 21)</div>
-            <div style="font-size:13.5px;color:#62707e">Spring Boot</div>
-            <div style="font-size:13.5px;color:#62707e">Spring Security</div>
-            <div style="font-size:13.5px;color:#62707e">REST / SOAP</div>
-            <div style="font-size:13.5px;color:#62707e">Microservicios</div>
-            <div style="font-size:13.5px;color:#62707e">EDA</div>
-          </div>
-        </div>
-
-        <div style="border:1px solid #e6ebf1;border-radius:14px;padding:22px 20px">
-          <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px">
-            <span style="color:#1ab3a8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/></svg></span>
-            <span style="font-family:'Sora',sans-serif;font-weight:600;font-size:14.5px;color:#16242f">Frontend</span>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:9px">
-            <div style="font-size:13.5px;color:#62707e">Angular</div>
-            <div style="font-size:13.5px;color:#62707e">TypeScript</div>
-            <div style="font-size:13.5px;color:#62707e">HTML</div>
-            <div style="font-size:13.5px;color:#62707e">CSS</div>
-            <div style="font-size:13.5px;color:#62707e">JavaScript</div>
-          </div>
-        </div>
-
-        <div style="border:1px solid #e6ebf1;border-radius:14px;padding:22px 20px">
-          <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px">
-            <span style="color:#1ab3a8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg></span>
-            <span style="font-family:'Sora',sans-serif;font-weight:600;font-size:14.5px;color:#16242f">Bases de Datos</span>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:9px">
-            <div style="font-size:13.5px;color:#62707e">PostgreSQL</div>
-            <div style="font-size:13.5px;color:#62707e">Oracle</div>
-            <div style="font-size:13.5px;color:#62707e">Cassandra</div>
-            <div style="font-size:13.5px;color:#62707e">Redis</div>
-          </div>
-        </div>
-
-        <div style="border:1px solid #e6ebf1;border-radius:14px;padding:22px 20px">
-          <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px">
-            <span style="color:#1ab3a8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 18a4 4 0 0 0 0-8 6 6 0 0 0-11.7-1.5A3.5 3.5 0 0 0 6.5 18z"/></svg></span>
-            <span style="font-family:'Sora',sans-serif;font-weight:600;font-size:14.5px;color:#16242f">Cloud &amp; DevOps</span>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:9px">
-            <div style="font-size:13.5px;color:#62707e">AWS (ECS, SQS, Cognito, CloudWatch)</div>
-            <div style="font-size:13.5px;color:#62707e">Terraform</div>
-            <div style="font-size:13.5px;color:#62707e">Docker</div>
-            <div style="font-size:13.5px;color:#62707e">Git</div>
-            <div style="font-size:13.5px;color:#62707e">Artifactory</div>
-          </div>
-        </div>
-
-        <div style="border:1px solid #e6ebf1;border-radius:14px;padding:22px 20px">
-          <div style="display:flex;align-items:center;gap:9px;margin-bottom:16px">
-            <span style="color:#1ab3a8"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
-            <span style="font-family:'Sora',sans-serif;font-weight:600;font-size:14.5px;color:#16242f">Calidad de Código</span>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:9px">
-            <div style="font-size:13.5px;color:#62707e">JUnit</div>
-            <div style="font-size:13.5px;color:#62707e">Mockito</div>
-            <div style="font-size:13.5px;color:#62707e">SonarQube</div>
-            <div style="font-size:13.5px;color:#62707e">Buenas prácticas</div>
-            <div style="font-size:13.5px;color:#62707e">Clean Code</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FORMACIÓN ===== -->
-  <section id="formacion" style="background:#fff;padding:10px 0 60px">
-    <div class="two-col pad" style="max-width:1200px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 1fr;gap:56px">
+  <!-- FORMACION -->
+  <section id="formacion" data-section-id="formacion" class="section">
+    <div class="section-wide formacion-grid">
       <div>
-        <p style="font-size:12px;font-weight:700;letter-spacing:0.16em;color:#0f8e84;margin-bottom:24px">FORMACIÓN ACADÉMICA</p>
-        <div style="display:flex;flex-direction:column;gap:20px">
-
-          <div style="display:flex;gap:13px">
-            <span style="color:#1ab3a8;flex:none;margin-top:1px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4L2 9l10 5 10-5z"/><path d="M6 11.5V16c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-4.5M22 9v5"/></svg></span>
+        <div class="section-eyebrow"><span class="line"></span><h2>FORMACIÓN</h2></div>
+        <div class="formacion-list" data-reveal>
+          <div class="formacion-item">
+            <div class="formacion-bullet"></div>
             <div>
-              <div style="font-family:'Sora',sans-serif;font-weight:600;font-size:14.5px;color:#16242f;margin-bottom:4px">Especialista en Auditoría de Sistemas</div>
-              <div style="font-size:13px;color:#62707e">Universidad Católica de Manizales<span style="margin:0 7px;color:#c3ccd5">|</span>2014</div>
+              <div class="formacion-title">Especialización en Auditoría de Sistemas</div>
+              <div class="formacion-school">Universidad Francisco de Paula Santander Ocaña (UFPSO)</div>
+              <div class="formacion-year">2017</div>
             </div>
           </div>
-
-          <div style="display:flex;gap:13px">
-            <span style="color:#1ab3a8;flex:none;margin-top:1px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4L2 9l10 5 10-5z"/><path d="M6 11.5V16c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-4.5M22 9v5"/></svg></span>
+          <div class="formacion-item">
+            <div class="formacion-bullet"></div>
             <div>
-              <div style="font-family:'Sora',sans-serif;font-weight:600;font-size:14.5px;color:#16242f;margin-bottom:4px">Ingeniero de Sistemas</div>
-              <div style="font-size:13px;color:#62707e">Universidad Francisco de Paula Santander Ocaña<span style="margin:0 7px;color:#c3ccd5">|</span>2013</div>
+              <div class="formacion-title">Ingeniería de Sistemas</div>
+              <div class="formacion-school">Universidad Francisco de Paula Santander Ocaña (UFPSO)</div>
+              <div class="formacion-year">2015</div>
             </div>
           </div>
+        </div>
 
+        <div class="lang-card" data-reveal>
+          <div class="lang-head">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2c3 3 3 17 0 20M12 2c-3 3-3 17 0 20"></path></svg>
+            <span>Idiomas</span>
+          </div>
+          <div class="lang-level">Inglés: Básico (A2)</div>
+          <div class="lang-detail">Duolingo English Test · 59 pts (jun. 2026)</div>
         </div>
       </div>
+
       <div>
-        <p style="font-size:12px;font-weight:700;letter-spacing:0.16em;color:#0f8e84;margin-bottom:24px">ACTUALMENTE PROFUNDIZANDO EN</p>
-        <div style="display:flex;flex-direction:column;gap:15px">
-
-          <div style="display:flex;align-items:center;gap:11px">
-            <span style="color:#1ab3a8;flex:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
-            <span style="font-size:14px;color:#3a4855">Specification-Driven Design</span>
+        <div class="section-eyebrow"><span class="line"></span><h2>CERTIFICACIONES</h2></div>
+        <div data-reveal>
+          <div class="cert-head">
+            <img src="assets/landing/dl-platzi.png" alt="Platzi" width="15" height="15">
+            <span>Platzi</span>
           </div>
-
-          <div style="display:flex;align-items:center;gap:11px">
-            <span style="color:#1ab3a8;flex:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
-            <span style="font-size:14px;color:#3a4855">Domain-Driven Design (DDD)</span>
-          </div>
-
-          <div style="display:flex;align-items:center;gap:11px">
-            <span style="color:#1ab3a8;flex:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
-            <span style="font-size:14px;color:#3a4855">Arquitecturas orientadas a eventos (EDA)</span>
-          </div>
-
-          <div style="display:flex;align-items:center;gap:11px">
-            <span style="color:#1ab3a8;flex:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
-            <span style="font-size:14px;color:#3a4855">Pruebas automatizadas y calidad continua</span>
-          </div>
-
+          <ul class="cert-list">
+            <li>Ruta de Aprendizaje Inglés Básico A2</li>
+            <li>Ruta de Aprendizaje Inglés Básico A1</li>
+            <li>Ruta Frontend a Profundidad con Angular</li>
+            <li>Ruta Desarrollo Backend con Java</li>
+            <li>Curso Profesional de Arquitectura de Software</li>
+            <li>Curso de Java Spring Security: Autenticación y Seguridad Web</li>
+            <li>Curso de Arquitecturas Limpias para Desarrollo de Software</li>
+            <li>Curso Práctico de Cloud Computing con AWS</li>
+            <li>Curso Práctico de Networking y Content Delivery en AWS</li>
+            <li>Curso de API First</li>
+            <li>Curso de Backend con Node.js: Base de Datos con PostgreSQL</li>
+            <li>Curso Básico de Testing en Java</li>
+            <li>Curso Profesional de Git y GitHub</li>
+            <li>Curso de Node.js: Autenticación, Microservicios y Redis</li>
+            <li>Curso de Frameworks y Librerías de JavaScript</li>
+            <li>Curso de API REST con JavaScript: Fundamentos</li>
+            <li>Curso de API REST con JavaScript: Ejemplos con APIs Reales</li>
+            <li>Curso de Backend con Node.js: Autenticación con Passport.js y JWT</li>
+            <li>Curso de NestJS: Autenticación con Passport y JWT</li>
+            <li>Curso de NestJS: Persistencia de Datos con TypeORM</li>
+            <li>Curso de NestJS: Persistencia de Datos con MongoDB</li>
+          </ul>
+          <div class="cert-note">(Entre otros cursos relevantes)</div>
         </div>
+      </div>
+    </div>
+
+    <div class="learning-block">
+      <div class="section-eyebrow"><span class="line"></span><h2>EN CONSTANTE APRENDIZAJE</h2></div>
+      <div class="learning-grid">
+        <div>· Nuevas metodologías: Spec Driven Development, Domain-Driven Design (DDD)</div>
+        <div>· Nuevas técnicas de desarrollo apoyadas en IA</div>
+        <div>· Buenas prácticas de Clean Code y principios SOLID</div>
+        <div>· Arquitecturas orientadas a eventos (EDA) y patrones de diseño de software</div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER CTA ===== -->
-  <footer id="contacto" style="background:#0a1622;color:#fff;border-top:1px solid rgba(30,206,192,0.12)">
-    <div class="footer-grid" style="max-width:1200px;margin:0 auto;padding:46px 32px 30px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center">
-      <div>
-        <h3 style="font-family:'Sora',sans-serif;font-weight:700;font-size:24px;margin-bottom:12px">¿Tienes un proyecto en mente?</h3>
-        <p style="font-size:14.5px;line-height:1.65;color:#9fb0c0;max-width:430px">Estoy abierto a nuevas oportunidades donde pueda aportar valor, liderar equipos y construir soluciones escalables.</p>
+  <!-- CONTACTO -->
+  <footer id="contacto" data-section-id="contacto" class="footer">
+    <div class="footer-inner">
+      <h2>¿Hablamos?</h2>
+      <p class="footer-lead">Estoy abierto a nuevas oportunidades en backend, arquitectura de software y proyectos cloud. Escríbeme por el canal que prefieras.</p>
+      <div class="footer-actions">
+        <a href="Hoja de Vida Daniel Jimenez - Julio 2026.pdf" target="_blank" class="btn-primary">Descargar CV (PDF)</a>
+        <a href="https://wa.me/573127655754?text=Hola%20Daniel%2C%20vi%20tu%20landing%20y%20quiero%20contactarte." target="_blank" class="btn-outline">WhatsApp</a>
+        <a href="https://www.linkedin.com/in/srdejo" target="_blank" class="btn-outline">LinkedIn</a>
       </div>
-      <div class="footer-cta" style="display:flex;gap:14px;justify-content:flex-end;flex-wrap:wrap">
-        <a href="mailto:srdejo@gmail.com" style="display:inline-flex;align-items:center;gap:10px;padding:14px 24px;background:#1ecec0;color:#06121b;font-weight:700;font-size:14.5px;border-radius:9px">Hablemos ✉</a>
-        <a href="https://linkedin.com/in/srdejo" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border:1px solid rgba(255,255,255,0.22);color:#fff;font-weight:600;font-size:14.5px;border-radius:9px">Ver en LinkedIn <span style="background:#1ecec0;color:#06121b;font-weight:700;font-size:11px;padding:2px 5px;border-radius:3px">in</span></a>
+
+      <div class="contact-box">
+        <div class="contact-box-title">ESCRÍBEME POR CORREO</div>
+
+        <div class="contact-success" data-contact-success hidden>
+          <div class="contact-success-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#3EC6E0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"></path></svg>
+          </div>
+          <div class="contact-success-title">¡Mensaje enviado!</div>
+          <div class="contact-success-text">Gracias por escribir, <span data-success-name>ti</span>. Te responderé lo antes posible.</div>
+          <button type="button" class="contact-reset" data-reset>Enviar otro mensaje</button>
+        </div>
+
+        <form class="contact-form" data-contact-form>
+          <div class="contact-field">
+            <label for="contact-name">Tu nombre <span class="required">*</span></label>
+            <input type="text" id="contact-name" name="name" placeholder="¿Cómo te llamas?" required>
+          </div>
+          <div class="contact-field">
+            <label for="contact-email">Tu correo <span class="required">*</span></label>
+            <input type="email" id="contact-email" name="email" placeholder="tucorreo@ejemplo.com" required>
+          </div>
+          <div class="contact-field">
+            <label for="contact-message">Mensaje <span class="required">*</span></label>
+            <textarea id="contact-message" name="message" placeholder="¿En qué te puedo ayudar?" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="contact-submit" data-submit>Enviar correo</button>
+          <div class="contact-feedback" data-feedback></div>
+        </form>
       </div>
-    </div>
-    <div style="border-top:1px solid rgba(255,255,255,0.07)">
-      <div style="max-width:1200px;margin:0 auto;padding:18px 32px;display:flex;justify-content:space-between;font-size:12.5px;color:#7d8d9c;flex-wrap:wrap;gap:8px">
-        <span>© 2025 Daniel Jiménez</span>
-        <span>Hecho con <span style="color:#1ecec0">♥</span> y mucho código</span>
+
+      <div class="footer-meta">
+        <span>Ocaña, Norte de Santander · Colombia</span>
+        <span>312 765 5754</span>
+        <span>Daniel Eduardo Jiménez Ovallos</span>
       </div>
     </div>
   </footer>
+</div>
 
-  <script>
-    const navLinks = document.querySelector('[data-nav-links]');
-    navLinks.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() { navLinks.classList.remove('open'); });
-    });
-  </script>
+<script src="src/js/script.js"></script>
 </body>
 </html>
