@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas frecuentes en entrevistas | Daniel Jiménez</title>
+  <meta name="description" content="Conceptos técnicos que suelo repasar antes de una entrevista: SOLID, microservicios, patrones de diseño, POO y estructuras de datos en Java.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://srdejo.github.io/preguntas-frecuentes.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Preguntas frecuentes en entrevistas | Daniel Jiménez">
+  <meta property="og:description" content="Conceptos técnicos que suelo repasar antes de una entrevista, explicados de forma sencilla y con ejemplos.">
+  <meta property="og:image" content="https://srdejo.github.io/assets/landing/social-preview.png">
+  <meta property="og:url" content="https://srdejo.github.io/preguntas-frecuentes.html">
+  <meta property="og:locale" content="es_ES">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Preguntas frecuentes en entrevistas | Daniel Jiménez">
+  <meta name="twitter:description" content="Conceptos técnicos que suelo repasar antes de una entrevista, explicados de forma sencilla y con ejemplos.">
+  <meta name="twitter:image" content="https://srdejo.github.io/assets/landing/social-preview.png">
+
+  <meta name="theme-color" content="#0A2233">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="faq-back">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+      Daniel Jiménez
+    </a>
+    <button class="theme-toggle" data-theme-toggle aria-label="Cambiar tema">
+      <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"></path></svg>
+      <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"></circle><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path></svg>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <header class="faq-hero">
+    <div class="section-eyebrow"><span class="line"></span><span style="font-size:12.5px;font-weight:800;letter-spacing:2px;color:var(--accent2);">ENTREVISTAS TÉCNICAS</span></div>
+    <h1>Preguntas frecuentes en entrevistas</h1>
+    <p>Conceptos técnicos que suelo repasar antes de una entrevista, explicados de forma sencilla y con ejemplos. La mayoría son de ingeniería de software en general; los de colecciones son específicos de Java, mi lenguaje principal.</p>
+  </header>
+
+  <!-- FAQ -->
+  <section class="section section-narrow">
+
+    <div class="faq-category">
+      <h3 class="faq-category-title">Principios de diseño</h3>
+      <div class="faq-card">
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Qué es SOLID? Explica cada principio</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="faq-intro">SOLID son 5 principios de diseño orientado a objetos que ayudan a escribir código mantenible y fácil de extender:</p>
+            <div class="faq-point"><strong>S – Responsabilidad Única: </strong><span>Una clase debe tener una sola responsabilidad, un solo motivo para cambiar. Ejemplo: separa la lógica de guardar una factura en base de datos de la lógica de enviarla por correo; son responsabilidades distintas.</span></div>
+            <div class="faq-point"><strong>O – Abierto/Cerrado: </strong><span>El código debe estar abierto a extensión, pero cerrado a modificación. Ejemplo: para agregar un nuevo medio de pago, creas una clase nueva que implemente una interfaz PaymentMethod, sin tocar el código que ya funciona.</span></div>
+            <div class="faq-point"><strong>L – Sustitución de Liskov: </strong><span>Una subclase debe poder reemplazar a su clase padre sin romper el comportamiento del programa. Ejemplo: si Ave tiene el método volar(), no deberías heredar Pinguino de Ave, porque un pingüino no vuela.</span></div>
+            <div class="faq-point"><strong>I – Segregación de Interfaces: </strong><span>Es mejor tener varias interfaces pequeñas y específicas que una sola interfaz grande. Ejemplo: separa una interfaz Trabajador en Comestible y Programable, para que una clase Robot no tenga que implementar comer().</span></div>
+            <div class="faq-point"><strong>D – Inversión de Dependencias: </strong><span>Los módulos de alto nivel no deben depender de módulos de bajo nivel, sino de abstracciones. Ejemplo: un servicio de notificaciones debe depender de una interfaz NotificationSender, no directamente de una clase EmailSender.</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Qué es DRY?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><span>"Don't Repeat Yourself" (no te repitas): evita duplicar la misma lógica o regla de negocio en varias partes del código. Si algo está escrito en dos lugares, un cambio futuro puede actualizar uno y olvidar el otro, generando bugs. Ejemplo: si validas el formato de un correo en tres controladores distintos, mejor crea un solo método de validación y reúsalo.</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Qué es YAGNI?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><span>"You Aren't Gonna Need It" (no lo vas a necesitar): no construyas funcionalidad extra "por si acaso" se necesita en el futuro. Ejemplo: si hoy solo necesitas guardar usuarios en una base de datos relacional, no construyas de entrada una capa para soportar 5 tipos de bases de datos que quizás nunca uses — es complejidad innecesaria.</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Qué es alta cohesión y bajo acoplamiento?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><strong>Alta cohesión: </strong><span>los elementos dentro de una misma clase o módulo están fuertemente relacionados y enfocados en una sola responsabilidad.</span></div>
+            <div class="faq-point"><strong>Bajo acoplamiento: </strong><span>los módulos o clases dependen lo menos posible unos de otros, idealmente comunicándose a través de interfaces.</span></div>
+            <div class="faq-point"><span>Un sistema con alta cohesión y bajo acoplamiento es más fácil de entender, probar y modificar, sin que un cambio en una parte rompa otras.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-category">
+      <h3 class="faq-category-title">Arquitectura y microservicios</h3>
+      <div class="faq-card">
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Qué son los microservicios?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><span>Un estilo de arquitectura donde una aplicación se divide en varios servicios pequeños e independientes, cada uno enfocado en una función de negocio específica (pagos, usuarios, notificaciones...). Cada servicio tiene su propia base de datos, se despliega por separado y se comunica con los demás por red (REST, colas o eventos). Esto permite escalar y evolucionar cada parte del sistema de forma independiente.</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Cuáles son los patrones de microservicios más comunes?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><strong>API Gateway: </strong><span>un único punto de entrada que enruta las peticiones del cliente hacia el microservicio correcto, y puede manejar autenticación y límites de tasa.</span></div>
+            <div class="faq-point"><strong>Circuit Breaker: </strong><span>evita que un servicio siga llamando a otro que está fallando; "corta el circuito" temporalmente para no saturar el sistema.</span></div>
+            <div class="faq-point"><strong>Saga: </strong><span>coordina transacciones que abarcan varios microservicios mediante una secuencia de pasos con acciones compensatorias si algo falla, ya que no existe una transacción distribuida única.</span></div>
+            <div class="faq-point"><strong>Service Discovery: </strong><span>permite que los servicios se encuentren entre sí dinámicamente en la red, sin direcciones fijas.</span></div>
+            <div class="faq-point"><strong>Strangler Fig: </strong><span>permite migrar un monolito a microservicios poco a poco, reemplazando funcionalidades una por una en vez de reescribir todo de golpe.</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Qué diferencia hay entre ACID y BASE?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><strong>ACID: </strong><span>(Atomicidad, Consistencia, Aislamiento, Durabilidad) son las garantías clásicas de las bases de datos relacionales: una transacción se ejecuta completa o no se ejecuta, y el sistema siempre queda consistente.</span></div>
+            <div class="faq-point"><strong>BASE: </strong><span>(Basically Available, Soft state, Eventually consistent) es el enfoque típico de muchas bases NoSQL y sistemas distribuidos: priorizan disponibilidad y escalabilidad, aceptando que los datos tarden un poco en ser consistentes en todos los nodos.</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Qué es la idempotencia en una API?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><span>Una operación es idempotente si ejecutarla una o varias veces produce el mismo resultado final. Un PUT que actualiza un recurso a un valor específico es idempotente; repetirlo no cambia nada más. Un POST que crea un registro nuevo cada vez normalmente no lo es. Es clave en sistemas de pagos, para evitar cobrar dos veces si una petición se reintenta por un error de red.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-category">
+      <h3 class="faq-category-title">Patrones y buenas prácticas</h3>
+      <div class="faq-card">
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Qué patrones de diseño de software conoces?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><strong>Singleton: </strong><span>garantiza que una clase tenga una única instancia en toda la aplicación, por ejemplo una configuración compartida.</span></div>
+            <div class="faq-point"><strong>Factory: </strong><span>centraliza la creación de objetos en un método, para no repetir la lógica de instanciación por toda la app.</span></div>
+            <div class="faq-point"><strong>Builder: </strong><span>permite construir un objeto complejo paso a paso, útil cuando tiene muchos parámetros opcionales.</span></div>
+            <div class="faq-point"><strong>Strategy: </strong><span>permite intercambiar un algoritmo por otro en tiempo de ejecución, por ejemplo distintas formas de calcular un descuento.</span></div>
+            <div class="faq-point"><strong>Observer: </strong><span>permite que varios objetos se suscriban y sean notificados cuando algo cambia, como en sistemas basados en eventos.</span></div>
+            <div class="faq-point"><strong>Adapter: </strong><span>permite que dos interfaces incompatibles trabajen juntas, por ejemplo al integrar una librería externa con una interfaz distinta a la que espera tu código.</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Qué es la Inyección de Dependencias (IoC)?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><span>Un objeto no crea directamente las dependencias que necesita, sino que las recibe desde afuera (por ejemplo, por el constructor). Frameworks como Spring gestionan estas dependencias mediante un contenedor de IoC. Ejemplo: un PagoService no debería hacer "new EmailSender()" dentro de sí mismo; en vez de eso recibe una interfaz NotificationSender ya lista, así es más fácil cambiarla o probarla con un mock.</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Diferencia entre autenticación y autorización?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><strong>Autenticación: </strong><span>responde "¿quién eres?" — verificar la identidad de un usuario, por ejemplo con usuario/contraseña o un token.</span></div>
+            <div class="faq-point"><strong>Autorización: </strong><span>responde "¿qué puedes hacer?" — una vez identificado, verificar si tiene permiso para una acción o recurso. Ejemplo: iniciar sesión es autenticación; que solo un usuario "admin" pueda borrar registros es autorización.</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Qué es un modelo de dominio anémico (objetos anémicos)?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><span>Es un antipatrón donde las clases del dominio solo tienen atributos con getters/setters, pero toda la lógica de negocio vive afuera, en clases de servicio. El objeto es solo una "bolsa de datos" sin comportamiento propio. Ejemplo: una clase Factura con getTotal()/setTotal() donde toda la lógica para calcular impuestos vive en FacturaService.</span></div>
+            <div class="faq-point"><span>Se prefiere un modelo rico, donde el propio objeto encapsula sus reglas: factura.calcularTotal(), factura.aplicarDescuento(), etc. Así la lógica queda junto a los datos que usa, con mayor cohesión.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-category">
+      <h3 class="faq-category-title">Programación orientada a objetos</h3>
+      <div class="faq-card">
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Qué es la abstracción?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><span>Consiste en modelar un objeto quedándote solo con lo esencial para el problema, ocultando los detalles de implementación. Ejemplo: una interfaz Notificador expone enviar(mensaje), sin exponer si por dentro usa correo, SMS o push.</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Qué es el encapsulamiento?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><span>Consiste en ocultar el estado interno de un objeto y exponer solo lo necesario a través de métodos públicos, protegiendo los datos de modificaciones inválidas. Ejemplo: una clase CuentaBancaria no permite modificar el saldo directamente; solo lo hace a través de métodos como depositar() o retirar(), que validan las reglas de negocio.</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Qué es la herencia?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><span>Permite que una clase (subclase) reutilice atributos y comportamiento de otra clase (superclase), estableciendo una relación "es un". Ejemplo: TarjetaCredito y TarjetaDebito pueden heredar de una clase Tarjeta que ya define el número y el titular. Debe usarse con cuidado para no violar Liskov: solo hereda si la subclase realmente "es un tipo de" la clase padre.</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Qué es el polimorfismo?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><span>Permite que distintos objetos respondan de forma distinta a un mismo mensaje o método. Ejemplo: si Tarjeta tiene el método calcularInteres(), TarjetaCredito y TarjetaDebito pueden implementarlo cada una a su manera, y el código que las usa solo llama tarjeta.calcularInteres() sin saber (ni importarle) de qué tipo específico es.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-category">
+      <h3 class="faq-category-title">Estructuras de datos y colecciones</h3>
+      <div class="faq-card">
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Diferencia entre HashMap y LinkedList?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="faq-intro">Son estructuras de Java que resuelven problemas distintos:</p>
+            <div class="faq-point"><strong>HashMap: </strong><span>guarda pares clave-valor. El acceso, inserción y búsqueda por clave son casi instantáneos (O(1) en promedio) gracias a una función de hash. Úsalo cuando necesitas buscar algo rápido por un identificador, como un usuario por su ID.</span></div>
+            <div class="faq-point"><strong>LinkedList: </strong><span>es una lista donde cada nodo apunta al siguiente. Insertar o eliminar al inicio o en medio es rápido (O(1)), pero buscar un elemento por posición es lento (O(n)) porque hay que recorrer nodo por nodo.</span></div>
+            <div class="faq-point"><strong>Extra: ArrayList: </strong><span>a diferencia de LinkedList, guarda los elementos en un arreglo contiguo: acceder por índice es muy rápido (O(1)), pero insertar en medio es más costoso porque hay que desplazar elementos.</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Diferencia entre List, Set y Map?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><strong>List: </strong><span>una colección ordenada que permite elementos duplicados y acceso por índice, como ArrayList o LinkedList.</span></div>
+            <div class="faq-point"><strong>Set: </strong><span>una colección que no permite elementos duplicados, como HashSet. Útil cuando solo te importa si un elemento existe o no.</span></div>
+            <div class="faq-point"><strong>Map: </strong><span>una colección de pares clave-valor, sin claves duplicadas, como HashMap. Útil para buscar un valor a partir de un identificador.</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Diferencia entre HashMap, LinkedHashMap y TreeMap?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><strong>HashMap: </strong><span>no garantiza ningún orden de las claves; es la opción más rápida cuando el orden no importa.</span></div>
+            <div class="faq-point"><strong>LinkedHashMap: </strong><span>mantiene el orden de inserción de las claves, útil cuando necesitas recorrerlas en el mismo orden en que las agregaste.</span></div>
+            <div class="faq-point"><strong>TreeMap: </strong><span>mantiene las claves ordenadas (por orden natural o un comparador), a costo de operaciones un poco más lentas (O(log n) en vez de O(1)).</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Por qué usar ConcurrentHashMap en vez de HashMap?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><span>HashMap no es seguro para usarse desde varios hilos al mismo tiempo (puede corromperse o entrar en bucles infinitos). ConcurrentHashMap permite lecturas y escrituras concurrentes de forma segura, dividiendo internamente el mapa en segmentos, sin bloquear toda la estructura como haría un HashMap sincronizado manualmente. Se usa mucho en servicios backend con alta concurrencia, como cachés en memoria.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="faq-footer">
+    <a href="index.html">← Volver al perfil de Daniel Jiménez</a>
+  </footer>
+</div>
+
+<script src="src/js/script.js"></script>
+</body>
+</html>

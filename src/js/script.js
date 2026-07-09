@@ -30,6 +30,14 @@
 
   initTheme();
 
+  // FAQ accordion
+  document.querySelectorAll('[data-faq-toggle]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.closest('[data-faq-item]');
+      if (item) item.classList.toggle('is-open');
+    });
+  });
+
   // Smooth scroll for in-page nav links
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
@@ -145,6 +153,38 @@
       setFeedback(form.querySelector('[data-feedback]'), '', '#8FA8B7');
       successPanel.hidden = true;
       form.hidden = false;
+    });
+  }
+
+  // Story modal ("Experiencia significativa")
+  var storyOverlay = document.querySelector('[data-story-overlay]');
+  if (storyOverlay) {
+    var storyModal = storyOverlay.querySelector('[data-story-modal]');
+    var storyCompanyEl = storyOverlay.querySelector('[data-story-company]');
+    var storyTitleEl = storyOverlay.querySelector('[data-story-title]');
+    var storyTextEl = storyOverlay.querySelector('[data-story-text]');
+
+    function openStory(btn) {
+      storyCompanyEl.textContent = btn.dataset.storyCompany || '';
+      storyTitleEl.textContent = btn.dataset.storyTitle || '';
+      storyTextEl.textContent = btn.dataset.storyText || '';
+      storyOverlay.hidden = false;
+    }
+
+    function closeStory() {
+      storyOverlay.hidden = true;
+    }
+
+    document.querySelectorAll('[data-story-btn]').forEach(function (btn) {
+      btn.addEventListener('click', function () { openStory(btn); });
+    });
+
+    storyOverlay.addEventListener('click', closeStory);
+    storyModal.addEventListener('click', function (e) { e.stopPropagation(); });
+    storyOverlay.querySelector('[data-story-close]').addEventListener('click', closeStory);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !storyOverlay.hidden) closeStory();
     });
   }
 })();
