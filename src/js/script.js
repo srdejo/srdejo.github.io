@@ -156,6 +156,64 @@
     });
   }
 
+  // FAQ suggestion form
+  var suggestForm = document.querySelector('[data-suggest-form]');
+  var suggestSuccess = document.querySelector('[data-suggest-success]');
+  if (suggestForm && suggestSuccess) {
+    var suggestSubmit = suggestForm.querySelector('[data-suggest-submit]');
+    var suggestFeedback = suggestForm.querySelector('[data-suggest-feedback]');
+    var suggestReset = document.querySelector('[data-suggest-reset]');
+
+    suggestForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (suggestSubmit.disabled) return;
+
+      var question = suggestForm.elements['question'].value.trim();
+      var answer = suggestForm.elements['answer'].value.trim();
+
+      if (!question || !answer) {
+        setFeedback(suggestFeedback, 'Escribe la pregunta y la respuesta.', '#E0776B');
+        return;
+      }
+
+      var message = 'Asunto: Pregunta: ' + question + '\n\n' +
+        'PREGUNTA\n' + question + '\n\n' +
+        'RESPUESTA CORRECTA\n' + answer;
+
+      suggestSubmit.disabled = true;
+      suggestSubmit.textContent = 'Enviando…';
+      setFeedback(suggestFeedback, '', '#8FA8B7');
+
+      fetch('https://micasachurch.co/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: 'Pregunta: ' + question, email: 'faq@danieljimenez.dev', message: message })
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('bad status');
+          suggestSubmit.textContent = 'Enviado ✓';
+          suggestForm.hidden = true;
+          suggestSuccess.hidden = false;
+        })
+        .catch(function () {
+          suggestSubmit.disabled = false;
+          suggestSubmit.textContent = 'Enviar pregunta';
+          setFeedback(suggestFeedback, 'No se pudo enviar. Intenta de nuevo más tarde.', '#E0776B');
+        });
+    });
+
+    if (suggestReset) {
+      suggestReset.addEventListener('click', function () {
+        suggestForm.reset();
+        suggestSubmit.disabled = false;
+        suggestSubmit.textContent = 'Enviar pregunta';
+        setFeedback(suggestFeedback, '', '#8FA8B7');
+        suggestSuccess.hidden = true;
+        suggestForm.hidden = false;
+      });
+    }
+  }
+
   // Story modal ("Experiencia significativa")
   var storyOverlay = document.querySelector('[data-story-overlay]');
   if (storyOverlay) {

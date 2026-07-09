@@ -879,3 +879,96 @@ a { text-decoration: none; color: inherit; }
 }
 
 .faq-footer a { color: #3EC6E0; font-weight: 700; font-size: 13px; }
+
+.faq-suggest {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 26px clamp(20px, 4vw, 32px) 30px;
+  margin-top: 8px;
+}
+
+.faq-suggest-lead {
+  margin: 0 0 20px;
+  font-size: 12.8px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 560px;
+}
+
+.faq-suggest-form { display: flex; flex-direction: column; gap: 14px; max-width: 560px; }
+.faq-suggest-field { display: flex; flex-direction: column; gap: 6px; }
+.faq-suggest-field label { font-size: 11.5px; font-weight: 700; color: var(--text-muted); }
+.faq-suggest-field label .required { color: #E0776B; }
+
+.faq-suggest-field textarea {
+  background: var(--bg-alt);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 13.5px;
+  color: var(--text-primary);
+  font-family: inherit;
+  outline: none;
+  resize: vertical;
+}
+
+.faq-suggest-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  background: var(--accent2);
+  color: #0A2233;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-family: inherit;
+}
+
+.faq-suggest-submit:disabled { background: var(--card-border); cursor: default; }
+
+.faq-suggest-feedback { font-size: 12px; font-weight: 600; margin-top: 10px; }
+
+.faq-suggest-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 10px 0 4px;
+  text-align: center;
+}
+
+.faq-suggest-success[hidden] { display: none; }
+.faq-suggest-form[hidden] { display: none; }
+
+.faq-suggest-success-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(62, 198, 224, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-suggest-success-title { font-size: 14.5px; font-weight: 800; color: var(--text-primary); }
+.faq-suggest-success-text { font-size: 12.5px; color: var(--text-muted); }
+
+.faq-suggest-reset {
+  border: 1.5px solid var(--card-border);
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  margin-top: 4px;
+  font-family: inherit;
+}
