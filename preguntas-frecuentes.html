@@ -122,6 +122,7 @@
           <div class="faq-answer">
             <div class="faq-point"><strong>API Gateway: </strong><span>un único punto de entrada que enruta las peticiones del cliente hacia el microservicio correcto, y puede manejar autenticación y límites de tasa.</span></div>
             <div class="faq-point"><strong>Circuit Breaker: </strong><span>evita que un servicio siga llamando a otro que está fallando; "corta el circuito" temporalmente para no saturar el sistema.</span></div>
+            <div class="faq-point"><strong>Resiliencia (Retry, Timeout, Bulkhead): </strong><span>patrones que permiten que un sistema tolere fallos parciales sin caerse completo. Retry reintenta una llamada fallida (con backoff); Timeout evita esperas indefinidas por un servicio lento; Bulkhead aísla recursos (pools de hilos/conexiones) por dependencia para que la falla de una no consuma todos los recursos y arrastre al resto del sistema.</span></div>
             <div class="faq-point"><strong>Saga: </strong><span>coordina transacciones que abarcan varios microservicios mediante una secuencia de pasos con acciones compensatorias si algo falla, ya que no existe una transacción distribuida única.</span></div>
             <div class="faq-point"><strong>Service Discovery: </strong><span>permite que los servicios se encuentren entre sí dinámicamente en la red, sin direcciones fijas.</span></div>
             <div class="faq-point"><strong>Strangler Fig: </strong><span>permite migrar un monolito a microservicios poco a poco, reemplazando funcionalidades una por una en vez de reescribir todo de golpe.</span></div>
@@ -235,6 +236,16 @@
           </button>
           <div class="faq-answer">
             <div class="faq-point"><span>Permite que distintos objetos respondan de forma distinta a un mismo mensaje o método. Ejemplo: si Tarjeta tiene el método calcularInteres(), TarjetaCredito y TarjetaDebito pueden implementarlo cada una a su manera, y el código que las usa solo llama tarjeta.calcularInteres() sin saber (ni importarle) de qué tipo específico es.</span></div>
+          </div>
+        </div>
+        <div class="faq-item" data-faq-item>
+          <button type="button" class="faq-question" data-faq-toggle>
+            <span>¿Qué diferencia hay entre sobrecarga (overload) y sobreescritura (override)?</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-point"><strong>Sobrecarga (Overload): </strong><span>definir varios métodos con el mismo nombre en la misma clase, pero con distinta firma (número o tipo de parámetros). Se resuelve en tiempo de compilación. Ejemplo: calcularTotal(double precio) y calcularTotal(double precio, double descuento).</span></div>
+            <div class="faq-point"><strong>Sobreescritura (Override): </strong><span>una subclase redefine un método que ya existe en su superclase, manteniendo la misma firma, para cambiar su comportamiento. Se resuelve en tiempo de ejecución y es la base del polimorfismo. Ejemplo: TarjetaCredito sobreescribe calcularInteres() de Tarjeta con su propia lógica.</span></div>
           </div>
         </div>
       </div>
