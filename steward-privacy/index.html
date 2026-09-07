@@ -1,96 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Steward – Privacy Policy</title>
-  <meta name="description" content="Steward stores all financial data locally on your device. No personal or financial information is shared with third parties.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://srdejo.github.io/steward-privacy/">
+<!DOCTYPE html><html lang="es" data-beasties-container><head>
+    <meta charset="utf-8">
+    <title>Steward – Privacy Policy</title>
+    <meta name="description" content="Daniel Eduardo Jiménez Ovallos, Arquitecto de Software en Ocaña, Colombia. Microservicios, monolitos modulares y arquitectura orientada a eventos en Java/Spring Boot sobre AWS, en banca y fintech.">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="preload" href="/assets/fonts/barlow-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/barlow-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+  <style>@font-face{font-family:Barlow;font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/barlow-latin-400.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Barlow;font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/barlow-latin-ext-400.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Barlow;font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/barlow-latin-500.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Barlow;font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/barlow-latin-ext-500.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Barlow;font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/barlow-latin-600.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Barlow;font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/barlow-latin-ext-600.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Barlow;font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/barlow-latin-700.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Barlow;font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/barlow-latin-ext-700.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Barlow;font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/barlow-latin-800.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Barlow;font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/barlow-latin-ext-800.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Barlow;font-style:normal;font-weight:900;font-display:swap;src:url(/assets/fonts/barlow-latin-900.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Barlow;font-style:normal;font-weight:900;font-display:swap;src:url(/assets/fonts/barlow-latin-ext-900.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}:root{--bg: #FBFAF6;--bg-alt: #F1F6F9;--nav-bg: rgba(251, 250, 246, .9);--text-primary: #123A5C;--text-secondary: #33424E;--text-muted: #6A7E8C;--card-bg: #FFFFFF;--card-border: #DCE7EE;--accent: #1B6E9E;--accent2: #19B6C9}*{box-sizing:border-box}html,body{margin:0;font-family:Barlow,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;background:var(--bg);color:var(--text-primary);transition:background .4s ease,color .4s ease}a{text-decoration:none;color:inherit}.card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:22px 24px;transition:background .4s ease,border-color .4s ease}
+</style><link rel="stylesheet" href="styles-5DEYGFYY.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-5DEYGFYY.css"></noscript><style ng-app-id="ng">[_nghost-ng-c3750936599]{display:block;min-height:100vh;font-family:Work Sans,sans-serif;background:#e7e4da;-webkit-font-smoothing:antialiased;color:#2a3326}a[_ngcontent-ng-c3750936599]{color:#3f6650;text-decoration:underline;text-decoration-color:#3f665059}a[_ngcontent-ng-c3750936599]:hover{text-decoration-color:#3f6650}.wrap[_ngcontent-ng-c3750936599]{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding-bottom:60px}.header-strip[_ngcontent-ng-c3750936599]{width:100%;background:linear-gradient(165deg,#3f6650,#2d4a39 55%,#23382b);display:flex;justify-content:center;padding:28px 24px 32px}.header-inner[_ngcontent-ng-c3750936599]{width:100%;max-width:600px;display:flex;align-items:center;gap:14px}.logo-badge[_ngcontent-ng-c3750936599]{width:48px;height:48px;border-radius:12px;background:#f3f0e7;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:0 4px 12px #0d1e1259}.brand-name[_ngcontent-ng-c3750936599]{font:700 22px/1 Lora,serif;color:#fff}.brand-tag[_ngcontent-ng-c3750936599]{font:500 12px/1 Work Sans;color:#c2d2b6;margin-top:5px}.card[_ngcontent-ng-c3750936599]{width:calc(100% - 40px);max-width:600px;background:#fbfaf4;border-radius:0 0 16px 16px;box-shadow:0 8px 32px #26392e1f;padding:40px 40px 48px}.eyebrow[_ngcontent-ng-c3750936599]{font:600 11px/1 Work Sans;letter-spacing:.16em;text-transform:uppercase;color:#84a07b;margin-bottom:14px}h1[_ngcontent-ng-c3750936599]{font:700 30px/1.15 Lora,serif;color:#26392e;margin:0 0 32px}.body[_ngcontent-ng-c3750936599]{display:flex;flex-direction:column;gap:20px;font:400 15px/1.75 Work Sans;color:#4a5e44}.body[_ngcontent-ng-c3750936599]   p[_ngcontent-ng-c3750936599]{margin:0}.meta[_ngcontent-ng-c3750936599]{margin-top:36px;padding-top:24px;border-top:1px solid #e3ddcc;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}.meta[_ngcontent-ng-c3750936599]   span[_ngcontent-ng-c3750936599]:first-child{font:500 12px/1 Work Sans;color:#9a9c8f}.meta[_ngcontent-ng-c3750936599]   span[_ngcontent-ng-c3750936599]:last-child{font:500 12px/1 Work Sans;color:#c89b3c}</style><meta name="description" content="Steward stores all financial data locally on your device. No personal or financial information is shared with third parties."><meta name="robots" content="index, follow"><meta property="og:type" content="website"><meta property="og:site_name" content="Steward"><meta property="og:title" content="Steward – Privacy Policy"><meta property="og:description" content="Steward stores all financial data locally on your device. No personal or financial information is shared with third parties."><meta property="og:image" content="https://srdejo.github.io/steward-privacy/og-steward.svg"><meta property="og:image:type" content="image/svg+xml"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Steward – Mayordomía que transforma"><meta property="og:url" content="https://srdejo.github.io/steward-privacy"><meta property="og:locale" content="es_ES"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Steward – Privacy Policy"><meta name="twitter:description" content="Steward stores all financial data locally on your device. No personal or financial information is shared with third parties."><meta name="twitter:image" content="https://srdejo.github.io/steward-privacy/og-steward.svg"><meta name="theme-color" content="#2d4a39"><link rel="canonical" href="https://srdejo.github.io/steward-privacy"></head>
+  <body><!--nghm-->
+    <app-root ng-version="22.1.0" ngh="1" ng-server-context="ssg"><router-outlet></router-outlet><app-steward-privacy _nghost-ng-c3750936599 ngh="0"><div _ngcontent-ng-c3750936599 class="wrap"><div _ngcontent-ng-c3750936599 class="header-strip"><div _ngcontent-ng-c3750936599 class="header-inner"><div _ngcontent-ng-c3750936599 class="logo-badge"><svg _ngcontent-ng-c3750936599="" width="30" height="30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-ng-c3750936599="" d="M33 26 L60 18 a4 4 0 0 1 5 3 l3 13 -38 0 Z" fill="#c89b3c"/><path _ngcontent-ng-c3750936599="" d="M27 31 L57 23 a3 3 0 0 1 4 2 l2 11 -36 0 Z" fill="#b9cbb2"/><rect _ngcontent-ng-c3750936599="" x="20" y="33" width="58" height="45" rx="12" fill="#2d4a39"/><rect _ngcontent-ng-c3750936599="" x="58" y="47" width="24" height="16" rx="8" fill="#f3f0e7"/><circle _ngcontent-ng-c3750936599="" cx="70" cy="55" r="3" fill="#2d4a39"/><path _ngcontent-ng-c3750936599="" d="M37 71 L37 55" stroke="#9db89a" stroke-width="2.6" stroke-linecap="round"/><path _ngcontent-ng-c3750936599="" d="M37 60 C30 60 26 54 28 49 C34 50 39 54 37 60 Z" fill="#b9cbb2"/><path _ngcontent-ng-c3750936599="" d="M37 57 C44 57 49 51 47 46 C40 47 36 52 37 57 Z" fill="#8aa583"/></svg></div><div _ngcontent-ng-c3750936599><div _ngcontent-ng-c3750936599 class="brand-name">Steward</div><div _ngcontent-ng-c3750936599 class="brand-tag">Mayordomía que transforma</div></div></div></div><div _ngcontent-ng-c3750936599 class="card"><div _ngcontent-ng-c3750936599 class="eyebrow">Legal</div><h1 _ngcontent-ng-c3750936599>Privacy Policy</h1><div _ngcontent-ng-c3750936599 class="body"><p _ngcontent-ng-c3750936599>Steward respects your privacy.</p><p _ngcontent-ng-c3750936599>Currently, the application stores financial information locally on the user's device. No personal or financial information is shared with third parties.</p><p _ngcontent-ng-c3750936599>If future versions include cloud synchronization or user accounts, this policy will be updated accordingly.</p><p _ngcontent-ng-c3750936599>Contact: <a _ngcontent-ng-c3750936599 href="mailto:srdejo@gmail.com">srdejo@gmail.com</a></p></div><div _ngcontent-ng-c3750936599 class="meta"><span _ngcontent-ng-c3750936599>Last updated: June 2026</span><span _ngcontent-ng-c3750936599>Steward · Personal Finance</span></div></div></div></app-steward-privacy><!----></app-root>
+  <script src="main-FWZRRSKI.js" type="module"></script>
 
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Steward">
-  <meta property="og:title" content="Steward – Privacy Policy">
-  <meta property="og:description" content="Steward stores all financial data locally on your device. No personal or financial information is shared with third parties.">
-  <meta property="og:image" content="https://srdejo.github.io/steward-privacy/og-steward.svg">
-  <meta property="og:image:secure_url" content="https://srdejo.github.io/steward-privacy/og-steward.svg">
-  <meta property="og:image:type" content="image/svg+xml">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Steward – Mayordomía que transforma">
-  <meta property="og:url" content="https://srdejo.github.io/steward-privacy/">
-  <meta property="og:locale" content="es_ES">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Steward – Privacy Policy">
-  <meta name="twitter:description" content="Steward stores all financial data locally on your device. No personal or financial information is shared with third parties.">
-  <meta name="twitter:image" content="https://srdejo.github.io/steward-privacy/og-steward.svg">
-  <meta name="twitter:image:alt" content="Steward – Mayordomía que transforma">
-  <meta name="twitter:creator" content="@srdejo">
-
-  <meta name="theme-color" content="#2d4a39">
-  <link rel="apple-touch-icon" href="/favicon.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Work Sans',sans-serif;background:#e7e4da;min-height:100vh;-webkit-font-smoothing:antialiased;color:#2a3326}
-    a{color:#3f6650;text-decoration:underline;text-decoration-color:rgba(63,102,80,.35)}
-    a:hover{text-decoration-color:#3f6650}
-  </style>
-</head>
-<body>
-  <div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;padding-bottom:60px">
-
-    <!-- Header strip -->
-    <div style="width:100%;background:linear-gradient(165deg,#3f6650 0%,#2d4a39 55%,#23382b 100%);display:flex;justify-content:center;padding:28px 24px 32px">
-      <div style="width:100%;max-width:600px;display:flex;align-items:center;gap:14px">
-        <!-- Steward wallet icon -->
-        <div style="width:48px;height:48px;border-radius:12px;background:#f3f0e7;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:0 4px 12px rgba(13,30,18,.35)">
-          <svg width="30" height="30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <path d="M33 26 L60 18 a4 4 0 0 1 5 3 l3 13 -38 0 Z" fill="#c89b3c"/>
-            <path d="M27 31 L57 23 a3 3 0 0 1 4 2 l2 11 -36 0 Z" fill="#b9cbb2"/>
-            <rect x="20" y="33" width="58" height="45" rx="12" fill="#2d4a39"/>
-            <rect x="58" y="47" width="24" height="16" rx="8" fill="#f3f0e7"/>
-            <circle cx="70" cy="55" r="3" fill="#2d4a39"/>
-            <path d="M37 71 L37 55" stroke="#9db89a" stroke-width="2.6" stroke-linecap="round"/>
-            <path d="M37 60 C30 60 26 54 28 49 C34 50 39 54 37 60 Z" fill="#b9cbb2"/>
-            <path d="M37 57 C44 57 49 51 47 46 C40 47 36 52 37 57 Z" fill="#8aa583"/>
-          </svg>
-        </div>
-        <div>
-          <div style="font:700 22px/1 'Lora',serif;color:#fff">Steward</div>
-          <div style="font:500 12px/1 'Work Sans';color:#c2d2b6;margin-top:5px">Mayordomía que transforma</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card -->
-    <div style="width:calc(100% - 40px);max-width:600px;background:#fbfaf4;border-radius:0 0 16px 16px;box-shadow:0 8px 32px rgba(38,57,46,.12);padding:40px 40px 48px">
-
-      <div style="font:600 11px/1 'Work Sans';letter-spacing:.16em;text-transform:uppercase;color:#84a07b;margin-bottom:14px">Legal</div>
-      <h1 style="font:700 30px/1.15 'Lora',serif;color:#26392e;margin-bottom:32px">Privacy Policy</h1>
-
-      <div style="display:flex;flex-direction:column;gap:20px;font:400 15px/1.75 'Work Sans';color:#4a5e44">
-
-        <p>Steward respects your privacy.</p>
-
-        <p>Currently, the application stores financial information locally on the user's device. No personal or financial information is shared with third parties.</p>
-
-        <p>If future versions include cloud synchronization or user accounts, this policy will be updated accordingly.</p>
-
-        <p>Contact: <a href="mailto:srdejo@gmail.com">srdejo@gmail.com</a></p>
-
-      </div>
-
-      <div style="margin-top:36px;padding-top:24px;border-top:1px solid #e3ddcc;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-        <span style="font:500 12px/1 'Work Sans';color:#9a9c8f">Last updated: June 2026</span>
-        <span style="font:500 12px/1 'Work Sans';color:#c89b3c">Steward · Personal Finance</span>
-      </div>
-    </div>
-
-  </div>
-</body>
-</html>
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"c":{"0":[{"i":"c3750936599","r":1}]}}]}</script></body></html>

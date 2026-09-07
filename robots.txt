@@ -1,29 +1,7 @@
-# Robots.txt para srdejo.github.io
+# robots.txt — https://srdejo.github.io/
+# Daniel Eduardo Jiménez Ovallos — Arquitecto de Software
 
-# Permitir a todos los buscadores
 User-agent: *
 Allow: /
-Allow: /index.html
-Allow: /payment-simulator-pro.html
-Allow: /payment-system-simulator.html
-Allow: /assets/
-Allow: /styles.css
-Allow: /script.js
-Allow: /payment-simulator.js
 
-# Desallow de directorios innecesarios
-Disallow: /old/
-Disallow: /old_2/
-Disallow: /.git/
-Disallow: /.vscode/
-Disallow: /.kiro/
-
-# Desallow de archivos específicos
-Disallow: /*.pdf$
-Disallow: /placeholder.svg
-
-# Crawl delay (opcional, para evitar sobrecarga)
-Crawl-delay: 1
-
-# Sitemap
 Sitemap: https://srdejo.github.io/sitemap.xml
